@@ -21,14 +21,28 @@ mixin headerTop
 						p Андреев & Панфилов
 						p Услуги опытных юристов
 				nav.nav-menu
-					a(href="#") Услуги адвоката
-					a(href="#") Схема работы
-					a(href="#") Результаты дел
-					a(href="#") Наша команда 
-					a(href="#") Цены
-					a(href="#") Контакты
+					a(href="#").nav-menu__item Услуги адвоката
+					a(href="#").nav-menu__item Схема работы
+					a(href="#").nav-menu__item Результаты дел
+					a(href="#").nav-menu__item Наша команда 
+					a(href="#").nav-menu__item Цены
+					a(href="#").nav-menu__item Контакты
 					+btn('button', 'Запрос адвокату', '', 'light')
+					+socialIcons
 				.header-button
 					+btn('button', 'Запрос адвокату', '', 'light')
 				.menu-toggle
 					span
+//- icon-social
+mixin socialIcons
+	.icon-block
+		a(href="#!")
+			i.fab.fa-telegram-plane
+		a(href="#!")
+			i.fab.fa-facebook-f
+		a(href="#!")
+			i.fab.fa-whatsapp
+		a(href="#!")
+			i.fab.fa-instagram
+		a(href="#!")
+			i.fab.fa-vk

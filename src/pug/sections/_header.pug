@@ -4,17 +4,8 @@ header.header(style="background-image:url(img/mainBg.jpg);")
 		+headerTop
 		.header-center
 			h2.head-2.title-decor Представление интересов в суде
-			h1.title-1 Опытные юристы в Саратове
+			h1.title-1 Опытные юристы в&nbsp;Саратове
 			p.subtitle Юридический стаж более 10 лет.
-			+btn('button', 'Заказать консультацию', '', 'light')
-	.icon-block
-		a(href="#!")
-			i.fab.fa-telegram-plane
-		a(href="#!")
-			i.fab.fa-facebook-f
-		a(href="#!")
-			i.fab.fa-whatsapp
-		a(href="#!")
-			i.fab.fa-instagram
-		a(href="#!")
-			i.fab.fa-vk
+			.header-center__btn
+				+btn('button', 'Заказать консультацию', '', 'light')
+	+socialIcons
