@@ -1,6 +1,53 @@
+.header {
+	position: relative;
+	background-color: #333333;
+	background-size: cover;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	height: 860px;
+	padding-top: 15px;
+
+	@media(max-width:767px) {
+		padding-top: 5px;
+		;
+	}
+
+	.icon-block {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 200px;
+	}
+}
+
+.header-center {
+	padding-top: 40px;
+	max-width: 710px;
+
+	.head-2 {
+		color: @ac;
+
+
+	}
+
+	.title-1 {
+		margin-top: 1em;
+	}
+
+	.subtitle {
+		font-size: 17px;
+		line-height: 1.59;
+		color: #ffffff;
+		margin-top: 1em;
+	}
+
+	.button {
+		margin-top: 70px;
+	}
+}
+
 .header-top {
 	height: 130px;
-	background-color: #333;
 
 	@media(max-width:1199px) {
 		height: 100px;

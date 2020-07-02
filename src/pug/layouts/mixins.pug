@@ -1,4 +1,4 @@
-mixin btn(tag, text, link,addClass)
+mixin btn(tag, text, link, addClass, madalName)
 	if tag == 'a'		
 		if addClass
 			a(href=" "+ link ).button.button-light #{text}
@@ -6,6 +6,29 @@ mixin btn(tag, text, link,addClass)
 			a(href=" "+ link ).button #{text}
 	else
 		if addClass
-			#{tag}.button.button-light #{text}
+			#{tag}.button.button-light(data-target="modal" data-role=" "+ madalName) #{text}
 		else
-			#{tag}.button #{text}
+			#{tag}.button(data-target="modal" data-role=" "+ madalName) #{text}
+
+//- header top
+mixin headerTop
+	.header-top
+		.container
+			.header-top__content
+				a(href="index.html").logo
+					img(src="img/logo.png", alt="logo")
+					.logo-text
+						p Андреев & Панфилов
+						p Услуги опытных юристов
+				nav.nav-menu
+					a(href="#") Услуги адвоката
+					a(href="#") Схема работы
+					a(href="#") Результаты дел
+					a(href="#") Наша команда 
+					a(href="#") Цены
+					a(href="#") Контакты
+					+btn('button', 'Запрос адвокату', '', 'light')
+				.header-button
+					+btn('button', 'Запрос адвокату', '', 'light')
+				.menu-toggle
+					span

@@ -95,7 +95,9 @@ button {
 .title-1 {
 	font-family: @ff2;
 	font-size: 70px;
-	line-height: 85px;
+	line-height: 1.21;
+	color: #fff;
+	text-transform: uppercase;
 
 }
 
@@ -103,6 +105,14 @@ button {
 	font-family: @ff2;
 	font-size: 50px;
 	line-height: 58px;
+
+}
+
+.head-2 {
+	font-family: @ff1;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 1.52;
 }
 
 .title-3 {
@@ -119,4 +129,57 @@ button {
 
 .mb-30 {
 	margin-bottom: 30px;
+}
+
+.title-decor {
+	position: relative;
+	width: fit-content;
+	border-right: 1px solid @ac;
+	// border-bottom: 1px solid @ac;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	// border-radius: 0 0 3px 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		width: 55%;
+		height: 1px;
+		background-color: @ac;
+	}
+}
+
+// social-block
+.icon-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		color: #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: @sec3;
+		font-size: 16px;
+
+		&+a {
+			margin-left: 10px;
+		}
+
+		// &:hover {
+		// 	background-color: @ac2;
+		// }
+
+		&:hover {
+			color: @ac;
+			box-shadow: 0 0 10px @ac2;
+		}
+	}
 }
