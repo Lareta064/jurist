@@ -2,6 +2,15 @@
 	height: 130px;
 	background-color: #333;
 
+	@media(max-width:1199px) {
+		height: 100px;
+	}
+
+	@media(max-width:767px) {
+		height: 60px;
+	}
+
+
 
 }
 
@@ -14,6 +23,11 @@
 		.logo-text p:last-child {
 			color: @ac2;
 		}
+	}
+
+	@media(max-width:767px) {
+		width: 50px;
+
 	}
 }
 
@@ -36,7 +50,7 @@
 		letter-spacing: 0.3px;
 	}
 
-	@media(max-width:991px) {
+	@media(max-width:767px) {
 		display: none;
 	}
 }
@@ -46,6 +60,19 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 130px;
+
+	@media(max-width:1199px) {
+		height: 100px;
+	}
+
+	// @media(max-width:991px) {
+	// 	height: 70px;
+	// }
+
+	@media(max-width:767px) {
+		height: 60px;
+	}
+
 }
 
 // menu
@@ -62,6 +89,7 @@
 		padding-bottom: 6px;
 		display: block;
 		width: fit-content;
+		white-space: nowrap;
 
 		&+a {
 			margin-left: 15px;
@@ -73,18 +101,22 @@
 		;
 	}
 
+	.button {
+		display: none;
+	}
+
 	@media(max-width:1199px) {
 		position: fixed;
 		top: 0;
 		right: 0;
 		width: 100%;
-		max-width: 400px;
+		max-width: 340px;
 		z-index: 5;
 		background-color: #333;
 		bottom: 0;
 		display: block;
 		padding-top: 80px;
-		padding-left: 80px;
+		padding-left: 40px;
 		transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s;
 		transform: translateX(100%);
 		// animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -97,6 +129,23 @@
 		&.active {
 			transform: translateX(10%);
 		}
+
+
 	}
 
+	@media(max-width:767px) {
+		.button {
+			display: inline-block;
+			margin-top: 30px;
+		}
+	}
+
+}
+
+.header-button {
+	display: block;
+
+	@media(max-width:767px) {
+		display: none;
+	}
 }
