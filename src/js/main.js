@@ -38,5 +38,14 @@ $(document).ready(function () {
 		})
 	}
 
+	$('.success-works').owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 15,
+		nav: true,
+		navText: ["<span><i class='fas fa-arrow-left'></i></span>", "<span><i class='fas fa-arrow-right'></i></span>"],
+		navSpeed: 1000,
+		smartSpeed: 1000
+	})
 
 })
