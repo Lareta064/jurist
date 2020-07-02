@@ -1,0 +1,11 @@
+mixin btn(tag, text, link,addClass)
+	if tag == 'a'		
+		if addClass
+			a(href=" "+ link ).button.button-light #{text}
+		else
+			a(href=" "+ link ).button #{text}
+	else
+		if addClass
+			#{tag}.button.button-light #{text}
+		else
+			#{tag}.button #{text}

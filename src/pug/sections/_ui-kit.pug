@@ -1,0 +1,26 @@
+.container(style="margin-top:50px")
+	.temp(class="mb-30")
+		button.button  Заказать консультацию
+		+btn('button', 'Заказать консультацию')
+		+btn('a','Заказать консультацию', 'index.html' )
+		+btn('a','Заказать консультацию', 'index.html', 'light' )
+		+btn('button', 'Заказать консультацию', '', 'light')
+.temp(style="margin-top:50px")
+	.header-top
+		.container
+			.header-top__content
+				a(href="index.html").logo
+					img(src="img/logo.png", alt="logo")
+					.logo-text
+						p Андреев & Панфилов
+						p Услуги опытных юристов
+				nav.nav-menu
+					a(href="#") Услуги адвоката
+					a(href="#") Схема работы
+					a(href="#") Результаты дел
+					a(href="#") Наша команда 
+					a(href="#") Цены
+					a(href="#") Контакты
+				+btn('button', 'Запрос адвокату', '', 'light')
+				.menu-toggle
+					span
