@@ -37,15 +37,21 @@ $(document).ready(function () {
 
 		})
 	}
+	let successSlider = $('.success-works')
 
-	$('.success-works').owlCarousel({
+	successSlider.owlCarousel({
 		items: 1,
 		loop: true,
-		margin: 15,
-		nav: true,
-		navText: ["<span><i class='fas fa-arrow-left'></i></span>", "<span><i class='fas fa-arrow-right'></i></span>"],
+		margin: 30,
+		dots: false,
 		navSpeed: 1000,
 		smartSpeed: 1000
 	})
-
+	$(".success-next").click(function () {
+		successSlider.trigger("next.owl.carousel");
+		console.log('555');
+	});
+	$(".success-prev").click(function () {
+		successSlider.trigger("prev.owl.carousel");
+	});
 })
