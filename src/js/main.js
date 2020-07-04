@@ -37,6 +37,51 @@ $(document).ready(function () {
 
 		})
 	}
+	//success
+	let successSlider = $('.success-works');
+	successSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 30,
+		navSpeed: 1000,
+		smartSpeed: 1000,
+		mouseDrag: false,
+		dots: true,
+		responsive: {
+			767: {
+				dots: false
+			}
+		}
+	})
+	$(".success-next").click(function () {
+		successSlider.trigger("next.owl.carousel");
+		console.log('555');
+	});
+	$(".success-prev").click(function () {
+		successSlider.trigger("prev.owl.carousel");
+	});
 
+	//team
+	let teamSlider = $('.team-slider');
+	teamSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 30,
+		navSpeed: 1000,
+		smartSpeed: 1000,
+		mouseDrag: false,
+		dots: true,
+		responsive: {
+			767: {
+				dots: false
+			}
+		}
+	})
+	$(".team-slider-next").click(function () {
+		teamSlider.trigger("next.owl.carousel");
 
+	});
+	$(".team-slider-prev").click(function () {
+		teamSlider.trigger("prev.owl.carousel");
+	});
 })

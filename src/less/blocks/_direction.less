@@ -1,0 +1,162 @@
+.direction {
+	margin-top: -100px;
+	position: relative;
+	z-index: 3;
+
+	@media(max-width:1599px) {
+		margin-top: -30px;
+	}
+
+	.direction-cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		@media(max-width:767px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.card-item {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
+		height: 360px;
+		background: #F7F7F7;
+
+		border: 2px solid transparent;
+		transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
+
+		p {
+			font-weight: 600;
+			font-size: 16px;
+			max-width: 200px;
+
+			@media(max-width: 1199px) {
+				font-size: 14px;
+			}
+
+			@media(max-width: 767px) {
+				font-size: 16px;
+				max-width: 300px;
+			}
+		}
+
+		&:hover {
+			// border: 2px 
+			outline: 1px solid #F3C54E;
+			outline-offset: -10px;
+			padding: 10px;
+			transform: translateY(-40px);
+			border-radius: 3px;
+
+			@media(max-width:767px) {
+				transform: translateY(0px);
+			}
+		}
+
+		@media(max-width:767px) {
+			width: 50%;
+			margin-bottom: 20px;
+		}
+
+		@media(max-width:580px) {
+			width: 100%;
+			max-width: 450px;
+			margin-left: auto;
+			margin-right: auto;
+
+			height: 200px;
+		}
+
+		&:nth-child(2n) {
+			background-color: #f0f0f0;
+		}
+	}
+}
+
+.card-item:first-child {
+	border-radius: 3px 0 0 3px;
+}
+
+.card-item:last-child {
+	border-radius: 0 3px 3px 0;
+}
+
+.direction-types {
+	margin-top: 150px;
+
+	h2 {
+		margin-bottom: 100px;
+	}
+
+	.type-item {
+		display: flex;
+		margin-bottom: 75px;
+		max-width: 300px;
+
+	}
+
+	.type-icon {
+		margin-right: 6px;
+		min-width: 44px;
+		min-height: 44px;
+
+	}
+
+	.type-text {
+		padding-left: 9px;
+		border-left: 1px solid @ac;
+
+		p {
+			line-height: 20px;
+		}
+
+	}
+
+	@media(max-width:1599px) {
+		margin-top: 130px;
+	}
+
+	@media(max-width:1439px) {
+		margin-top: 110px;
+
+		h2 {
+			margin-bottom: 80px;
+		}
+
+		.type-item {
+			margin-bottom: 60px;
+		}
+	}
+
+	@media(max-width:1199px) {
+		margin-top: 90px;
+
+	}
+
+	@media(max-width:991px) {
+		margin-top: 70px;
+
+		h2 {
+			margin-bottom: 60px;
+		}
+
+		.type-item {
+			margin-bottom: 45px;
+		}
+	}
+
+	@media(max-width:767px) {
+		margin-top: 50px;
+
+		.type-item {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+}

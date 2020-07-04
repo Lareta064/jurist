@@ -64,6 +64,7 @@ button {
 	right: 0;
 	backdrop-filter: blur(3px);
 	display: none;
+	z-index: 2;
 }
 
 #overlay.active {
@@ -92,10 +93,41 @@ button {
 	align-items: center;
 }
 
+.text-14 {
+	font-size: 14px;
+	line-height: 19px;
+}
+
 .title-1 {
 	font-family: @ff2;
 	font-size: 70px;
-	line-height: 85px;
+	line-height: 1.21;
+	color: #fff;
+	text-transform: uppercase;
+
+	@media(max-width:1599px) {
+		font-size: 60px;
+	}
+
+	@media(max-width:1439px) {
+		font-size: 50px;
+	}
+
+	@media(max-width:1199px) {
+		font-size: 45px;
+	}
+
+	@media(max-width:991px) {
+		font-size: 40px;
+	}
+
+	@media(max-width:767px) {
+		font-size: 34px;
+	}
+
+	@media(max-width:579px) {
+		font-size: 26px;
+	}
 
 }
 
@@ -103,6 +135,14 @@ button {
 	font-family: @ff2;
 	font-size: 50px;
 	line-height: 58px;
+
+}
+
+.head-2 {
+	font-family: @ff1;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 1.52;
 }
 
 .title-3 {
@@ -111,12 +151,77 @@ button {
 	line-height: 50px;
 }
 
-.title-4 {
+.title-30 {
 	font-family: @ff2;
 	font-size: 30px;
-	line-height: 38px;
+	line-height: 1.2;
+
+	@media(max-width:1199px) {
+		font-size: 28px;
+	}
+
+	@media(max-width:767px) {
+		font-size: 24px;
+	}
+
+	@media(max-width:374px) {
+		font-size: 22px;
+	}
 }
 
 .mb-30 {
 	margin-bottom: 30px;
+}
+
+.title-decore {
+	position: relative;
+	width: fit-content;
+	border-right: 1px solid @ac;
+	padding-right: 20px;
+	padding-bottom: 15px;
+
+	@media(max-width: 737px) {
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
+
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		width: 55%;
+		max-width: 266px;
+		height: 1px;
+		background-color: @ac;
+	}
+}
+
+// social-block
+.icon-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		color: #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: @sec3;
+		font-size: 16px;
+		transition: .3s;
+
+		&+a {
+			margin-left: 10px;
+		}
+
+		&:hover {
+			color: @ac;
+		}
+	}
 }
