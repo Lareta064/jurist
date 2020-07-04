@@ -43,7 +43,6 @@ $(document).ready(function () {
 		items: 1,
 		loop: true,
 		margin: 30,
-		dots: false,
 		navSpeed: 1000,
 		smartSpeed: 1000,
 		mouseDrag: false
@@ -62,9 +61,9 @@ $(document).ready(function () {
 		items: 1,
 		loop: true,
 		margin: 30,
-		dots: false,
 		navSpeed: 1000,
-		smartSpeed: 1000
+		smartSpeed: 1000,
+		mouseDrag: false
 	})
 	$(".team-slider-next").click(function () {
 		teamSlider.trigger("next.owl.carousel");

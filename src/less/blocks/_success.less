@@ -140,6 +140,12 @@
 
 .arrow-icon {
 	cursor: pointer;
+
+	span {
+		display: flex;
+		align-items: center;
+	}
+
 }
 
 .arrow-icon svg path {
@@ -184,7 +190,11 @@
 
 		@media(max-width:991px) {
 			justify-content: flex-end;
-			top: 5px;
+
+		}
+
+		@media(max-width:767px) {
+			display: none;
 		}
 
 
