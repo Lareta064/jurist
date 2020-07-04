@@ -1,0 +1,108 @@
+.interaction-scheme {
+	padding-top: 110px;
+	padding-bottom: 130px;
+	background-color: #FDFDFE;
+	background-image: url(../img/schemeBg.jpg);
+	background-size: cover;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	h2 {
+		margin-bottom: 100px;
+
+		@media(max-width:1199px) {
+			margin-bottom: 70px;
+		}
+
+		@media(max-width:767px) {
+			margin-bottom: 50px;
+		}
+	}
+
+	@media(max-width:1199px) {
+		padding-top: 90px;
+		padding-bottom: 110px;
+	}
+
+	@media(max-width:991px) {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+
+	@media(max-width:767px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+.scheme-block {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media(max-width:991px) {
+		width: 720px;
+
+	}
+
+	@media(max-width:767px) {
+		width: 480px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media(max-width:579px) {
+		width: 240px;
+
+	}
+}
+
+// SCHEM CARD
+.scheme-card {
+	max-width: 240px;
+	// margin-left: auto;
+	// margin-right: auto;
+	padding: 20px;
+	border-radius: 2px;
+	width: 20%;
+	margin-bottom: 20px;
+
+	.scheme-card-num {
+		font-family: @ff2;
+		font-size: 50px;
+		line-height: 1.16;
+		color: @sec2;
+		margin-bottom: 0.5em;
+	}
+
+	.scheme-card-title {
+		font-size: 16px;
+		font-weight: 22px;
+		color: @ac;
+		font-weight: 500;
+		margin-bottom: 25px;
+	}
+
+	.scheme-card-text {
+		font-size: 13px;
+		line-height: 23px;
+	}
+
+	&:hover {
+		box-shadow: 0 0 12px rgba(0, 0, 0, .05);
+
+	}
+
+	@media(max-width:991px) {
+		width: 33.3%;
+	}
+
+	@media(max-width:767px) {
+		width: 50%;
+	}
+
+	@media(max-width:579px) {
+		width: 100%;
+	}
+}
