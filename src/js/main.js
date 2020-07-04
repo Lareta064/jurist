@@ -45,7 +45,13 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		mouseDrag: false
+		mouseDrag: false,
+		dots: true,
+		responsive: {
+			767: {
+				dots: false
+			}
+		}
 	})
 	$(".success-next").click(function () {
 		successSlider.trigger("next.owl.carousel");
@@ -63,7 +69,13 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		mouseDrag: false
+		mouseDrag: false,
+		dots: true,
+		responsive: {
+			767: {
+				dots: false
+			}
+		}
 	})
 	$(".team-slider-next").click(function () {
 		teamSlider.trigger("next.owl.carousel");
