@@ -9,6 +9,8 @@
 		margin-bottom: 57px;
 
 
+
+
 		p:first-child {
 			font-size: 18px;
 			line-height: 1.56;
@@ -23,12 +25,47 @@
 			padding-left: 20px;
 			border-left: 1px solid @ac;
 		}
+
+		@media(max-width:991px) {
+			p:first-child {
+				width: 56%;
+
+			}
+
+			p:last-child {
+				max-width: 300px;
+			}
+		}
+
+		@media(max-width:767px) {
+			display: block;
+
+			p:first-child {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			p:last-child {
+				max-width: 420px;
+			}
+		}
 	}
 }
 
 .service-cost-content {
 	h2 {
-		margin-bottom: 100px;
+		margin-bottom: 105px;
+
+		@media(max-width:1199px) {
+			margin-bottom: 60px;
+			margin-top: 80px;
+		}
+	}
+
+	margin-top: -80px;
+
+	@media(max-width:1199px) {
+		margin-top: 0;
 	}
 }
 
