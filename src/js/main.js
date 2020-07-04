@@ -154,4 +154,14 @@ $(document).ready(function () {
 	$(".team-slider-prev").click(function () {
 		teamSlider.trigger("prev.owl.carousel");
 	});
+
+	//аккордеон развернуть стрелку
+	$('.collapsable').on('show.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.addClass("rotate");
+	});
+	$('.collapsable').on('hide.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.removeClass("rotate");
+	});
 })
