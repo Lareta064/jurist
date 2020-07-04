@@ -26,7 +26,7 @@
 		width: 25%;
 		height: 360px;
 		background: #F7F7F7;
-		border-radius: 3px;
+
 		border: 2px solid transparent;
 		transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
 
@@ -46,8 +46,12 @@
 		}
 
 		&:hover {
-			border: 2px solid #F3C54E;
+			// border: 2px 
+			outline: 1px solid #F3C54E;
+			outline-offset: -10px;
+			padding: 10px;
 			transform: translateY(-40px);
+			border-radius: 3px;
 
 			@media(max-width:767px) {
 				transform: translateY(0px);
@@ -72,6 +76,14 @@
 			background-color: #f0f0f0;
 		}
 	}
+}
+
+.card-item:first-child {
+	border-radius: 3px 0 0 3px;
+}
+
+.card-item:last-child {
+	border-radius: 0 3px 3px 0;
 }
 
 .direction-types {

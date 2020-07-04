@@ -37,15 +37,16 @@ $(document).ready(function () {
 
 		})
 	}
-	let successSlider = $('.success-works')
-
+	//success
+	let successSlider = $('.success-works');
 	successSlider.owlCarousel({
 		items: 1,
 		loop: true,
 		margin: 30,
 		dots: false,
 		navSpeed: 1000,
-		smartSpeed: 1000
+		smartSpeed: 1000,
+		mouseDrag: false
 	})
 	$(".success-next").click(function () {
 		successSlider.trigger("next.owl.carousel");
@@ -53,5 +54,23 @@ $(document).ready(function () {
 	});
 	$(".success-prev").click(function () {
 		successSlider.trigger("prev.owl.carousel");
+	});
+
+	//team
+	let teamSlider = $('.team-slider');
+	teamSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 30,
+		dots: false,
+		navSpeed: 1000,
+		smartSpeed: 1000
+	})
+	$(".team-slider-next").click(function () {
+		teamSlider.trigger("next.owl.carousel");
+
+	});
+	$(".team-slider-prev").click(function () {
+		teamSlider.trigger("prev.owl.carousel");
 	});
 })

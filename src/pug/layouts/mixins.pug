@@ -47,6 +47,13 @@ mixin socialIcons
 		a(href="#!")
 			i.fab.fa-vk
 
+mixin schemeCard(num, title, text)
+	.scheme-card
+		p.scheme-card-num #{num}.
+		p.scheme-card-title #{title}
+		p.scheme-card-text !{text}
+
+
 //- SVG ICONS
 mixin linkIcon
 	span
