@@ -45,7 +45,7 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		mouseDrag: false,
+		// mouseDrag: false,
 		dots: true,
 		responsive: {
 			767: {
@@ -69,7 +69,7 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		mouseDrag: false,
+		// mouseDrag: false,
 		dots: true,
 		responsive: {
 			767: {
