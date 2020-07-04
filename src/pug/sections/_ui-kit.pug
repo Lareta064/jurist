@@ -27,24 +27,25 @@
 					span
 .temp(style="margin-top:50px")
 	.container
-		.card-wr(style="display: flex")
-			.scheme-card
-				p.scheme-card-num 01.
-				p.scheme-card-title Первый контакт
-				p.scheme-card-text Заявка с сайта, телефонный звонок и др. Я перезваниваю по номеру вашего телефона. Краткое ознакомление со сложившейся ситуацией. Договариваемся о встрече.
-			.scheme-card
-				p.scheme-card-num 01.
-				p.scheme-card-title Первый контакт
-				p.scheme-card-text Заявка с сайта, телефонный звонок и др. Я перезваниваю по номеру вашего телефона. Краткое ознакомление со сложившейся ситуацией. Договариваемся о встрече. 
-			.scheme-card
-				p.scheme-card-num 01.
-				p.scheme-card-title Первый контакт
-				p.scheme-card-text Заявка с сайта, телефонный звонок и др. Я перезваниваю по номеру вашего телефона. Краткое ознакомление со сложившейся ситуацией. Договариваемся о встрече. 
-			.scheme-card
-				p.scheme-card-num 01.
-				p.scheme-card-title Первый контакт
-				p.scheme-card-text Заявка с сайта, телефонный звонок и др. Я перезваниваю по номеру вашего телефона. Краткое ознакомление со сложившейся ситуацией. Договариваемся о встрече. 
-			.scheme-card
-				p.scheme-card-num 01.
-				p.scheme-card-title Первый контакт
-				p.scheme-card-text Заявка с сайта, телефонный звонок и др. Я перезваниваю по номеру вашего телефона. Краткое ознакомление со сложившейся ситуацией. Договариваемся о встрече.  
+		form#contact-form
+			h3 Оставьте свою заявку, и мы перезвоним вам в течение 5&nbsp;минут!
+			.form-group
+				input(type="text" name="userName" )
+				span.fake-placeholder Имя
+				span.error-notify
+				span.error-text Введите имя
+			.form-group
+				input(type="text" name="userPhone"  class="phone")
+				span.fake-placeholder Телефон
+				span.error-notify
+				span.error-text Введите номер телефона
+			.form-group
+				textarea(type="text" name="message"  )
+				span.fake-placeholder Комментарий к заказу
+			.form-group.agree-text
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" name="agreePolitic")
+					span.custom-checkbox
+					| Принимаю  #[a(href="#") условия обработки] моих данных.
+			.form-group
+				input.page-btn2(type="submit" value="Отправить")
