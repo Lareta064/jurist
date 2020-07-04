@@ -37,7 +37,77 @@ $(document).ready(function () {
 
 		})
 	}
-	//success
+	// маска для телефона
+	$(".phone").mask("+7(999)999-99-99");
+	$.fn.setCursorPosition = function (pos) {
+		if ($(this).get(0).setSelectionRange) {
+			$(this).get(0).setSelectionRange(pos, pos);
+		} else if ($(this).get(0).createTextRange) {
+			var range = $(this).get(0).createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', pos);
+			range.moveStart('character', pos);
+			range.select();
+		}
+	};
+	$('input.phone').click(function () {
+		$(this).setCursorPosition(3); // set position number
+	});
+	/*---ПОКАЗАТЬ ВОСКЛИЦАТЕЛЬНЫЙ ЗНАК В ИНПУТЕ */
+	const checkboxGroup = document.querySelectorAll('label.form-label');
+	const requiredInputs = document.querySelectorAll('.form-group  input[type="text"]');
+	const textareaElement = document.querySelector('.form-group textarea');
+	for (let item of requiredInputs) {
+		//по клику в текстовый инпут убираем восклиц знак и активируем плейсхолдер
+		const thisParent = item.closest('.form-group');
+		item.addEventListener('focus', function () {
+			thisParent.classList.remove('error');
+			thisParent.querySelector('.fake-placeholder').classList.add('active');
+
+		});
+		//по блюру у пустого инпута деактивируем плейсхолдер
+		item.addEventListener('blur', function () {
+			if (this.value.length == 0) {
+				thisParent.querySelector('.fake-placeholder').classList.remove('active');
+			}
+		})
+	}
+	// для текстареа активируем и деактивируем кастомный плейсхолдер при фокусе и блюре
+	if (textareaElement) {
+		textareaElement.addEventListener('focus', function () {
+			const thisParent = this.closest('.form-group');
+			thisParent.querySelector('.fake-placeholder').classList.add('active');
+
+		});
+		textareaElement.addEventListener('blur', function () {
+			const thisParent = this.closest('.form-group');
+			if (this.value.length == '0') {
+				thisParent.querySelector('.fake-placeholder').classList.remove('active');
+
+			}
+		});
+	}
+
+	/*ВАЛИДАЦИЯ ФОРМЫ */
+	$("form").on('submit', function (event) {
+		event.preventDefault();
+
+		let success = false;
+
+		for (let item of requiredInputs) {
+			const thisParent = item.closest('.form-group');
+
+			if (item.value.length == 0) {
+				thisParent.classList.add('error');
+				success = false;
+
+			} else {
+				success = true;
+			}
+		}
+	})
+
+	//success works slider
 	let successSlider = $('.success-works');
 	successSlider.owlCarousel({
 		items: 1,
@@ -83,5 +153,15 @@ $(document).ready(function () {
 	});
 	$(".team-slider-prev").click(function () {
 		teamSlider.trigger("prev.owl.carousel");
+	});
+
+	//аккордеон развернуть стрелку
+	$('.collapsable').on('show.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.addClass("rotate");
+	});
+	$('.collapsable').on('hide.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.removeClass("rotate");
 	});
 })

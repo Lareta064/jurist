@@ -64,7 +64,8 @@ button {
 	right: 0;
 	backdrop-filter: blur(3px);
 	display: none;
-	z-index: 2;
+	z-index: 9;
+	background-color: rgba(0, 0, 0, .4);
 }
 
 #overlay.active {
@@ -92,6 +93,7 @@ button {
 	display: flex;
 	align-items: center;
 }
+
 
 .text-14 {
 	font-size: 14px;
@@ -148,7 +150,19 @@ button {
 .title-3 {
 	font-family: @ff2;
 	font-size: 40px;
-	line-height: 50px;
+	line-height: 1.25;
+
+	@media(max-width:1360px) {
+		font-size: 34px;
+	}
+
+	@media(max-width:991px) {
+		font-size: 28px;
+	}
+
+	@media(max-width:767px) {
+		font-size: 24px;
+	}
 }
 
 .title-30 {
