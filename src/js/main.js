@@ -125,7 +125,6 @@ $(document).ready(function () {
 	})
 	$(".success-next").click(function () {
 		successSlider.trigger("next.owl.carousel");
-		console.log('555');
 	});
 	$(".success-prev").click(function () {
 		successSlider.trigger("prev.owl.carousel");
