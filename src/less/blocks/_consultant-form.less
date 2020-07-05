@@ -1,0 +1,82 @@
+.consultant-form {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 70px;
+	background-color: #333333;
+	width: 95%;
+	max-width: 1516px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../img/formbg.jpg);
+	background-size: cover;
+	background-position: 100% 0;
+	// margin-top: -80px;
+	transform: translateY(-50%);
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .80);
+	}
+
+	.section-content {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+
+		.title-3 {
+			margin-bottom: 1.25em;
+		}
+
+		.section-text {
+			// padding-right: 40px;
+
+			// @media(max-width:767px) {
+			// 	padding-right: 15px;
+			// }
+		}
+	}
+
+	.feedback-form {
+		max-width: 515px;
+		position: relative;
+		left: -40px;
+
+		.button {
+			margin-top: 40px;
+		}
+
+		@media(max-width:1919px) {
+			left: 0px;
+		}
+
+		@media(max-width:767px) {
+			margin-top: 45px;
+		}
+	}
+
+	@media(max-width:1439px) {
+
+
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media(max-width:1199px) {
+		transform: translateY(0%);
+		padding-top: 70px;
+		padding-bottom: 70px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media(max-width:767px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}

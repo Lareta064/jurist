@@ -1,0 +1,207 @@
+.team {
+	padding-top: 150px;
+	padding-bottom: 150px;
+
+	h2 {
+		position: absolute;
+		z-index: 3;
+	}
+
+	@media(max-width:1439px) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	@media(max-width:1199px) {
+		position: relative;
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		h2 {
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+	}
+
+	@media(max-width:991px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+	}
+
+	@media(max-width:767px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+.team-content {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.team-slider {
+	height: 100%;
+
+	.owl-stage-outer {
+		height: 100%;
+
+		.owl-stage {
+			height: 100%;
+
+			.owl-item {
+				height: 100%;
+			}
+		}
+	}
+
+	@media(max-width:991px) {
+		.owl-stage-outer {
+			height: auto;
+		}
+	}
+
+}
+
+.slider-wrapper--left {
+	width: 56%;
+
+	@media(max-width:1229px) {
+		width: 66%;
+	}
+
+	@media(max-width:991px) {
+		width: 100%;
+	}
+}
+
+.slider-wrapper--right {
+	width: 41.5%;
+	max-width: 480px;
+
+	@media(max-width:1229px) {
+		width: 30%;
+	}
+}
+
+.team-slide__buttons {
+	display: flex;
+	position: relative;
+	margin-top: 25px;
+
+	button {
+		margin-right: 30px;
+		max-width: 280px;
+	}
+
+	@media(max-width:991px) {
+		margin-top: 20px;
+	}
+
+	@media(max-width:584px) {
+		flex-direction: column;
+
+		button {
+			margin-right: 0px;
+		}
+	}
+}
+
+.team-slide__text {
+	padding-right: 30px;
+	padding-top: 100px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	// padding-bottom: 20px;
+
+	@media(max-width:1199px) {
+
+		padding-top: 0px;
+		position: relative;
+		z-index: 2;
+
+
+		p {
+			font-size: 14px;
+		}
+	}
+
+	@media(max-width:991px) {
+		padding-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		font-size: 15px;
+		margin-top: 0;
+	}
+}
+
+.photo-title {
+	margin-top: 8px;
+
+	p:first-child {
+		font-size: 16px;
+		line-height: 21px;
+		font-family: @ff2;
+	}
+
+	p:last-child {
+		font-size: 12px;
+		line-height: 16px;
+		font-family: @ff1;
+	}
+}
+
+.team .slider-arrow-block {
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+
+	@media(max-width:991px) {
+
+		bottom: 10px;
+	}
+
+	@media(max-width:767px) {
+		display: none;
+	}
+}
+
+.team-slider-arrow {
+	justify-content: flex-end;
+}
+
+.slider-wrapper {
+	.owl-dots {
+		position: absolute;
+		bottom: -30px;
+		display: none;
+		justify-content: center;
+		left: 0;
+		right: 0;
+
+		.owl-dot {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: @sec1;
+			border: 2px solid @ac;
+
+			&.active {
+				background-color: @ac;
+			}
+
+			&+.owl-dot {
+				margin-left: 12px;
+			}
+		}
+
+		@media(max-width:767px) {
+			display: flex;
+		}
+	}
+}
