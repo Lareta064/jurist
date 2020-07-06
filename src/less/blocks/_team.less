@@ -1,6 +1,6 @@
 .team {
 	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-bottom: 190px;
 
 	h2 {
 		position: absolute;
@@ -122,11 +122,23 @@
 
 	button {
 		margin-right: 30px;
-		max-width: 280px;
+		padding-left: 60px;
+		padding-right: 60px;
+		white-space: nowrap;
 	}
+
+
 
 	@media(max-width:991px) {
 		margin-top: 20px;
+
+		button {
+
+			padding-left: 45px;
+			padding-right: 45px;
+
+		}
+
 	}
 
 	@media(max-width:584px) {
@@ -134,13 +146,17 @@
 
 		button {
 			margin-right: 0px;
+			max-width: 280px;
+			padding-left: 10px;
+			padding-right: 10px;
+
 		}
 	}
 }
 
 .team-slide__text {
 	padding-right: 40px;
-	padding-top: 95px;
+	padding-top: 100px;
 
 	display: flex;
 	flex-direction: column;
