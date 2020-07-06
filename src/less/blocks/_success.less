@@ -168,7 +168,11 @@
 			left: auto;
 			right: 0px;
 
-			bottom: -5px;
+			bottom: 0px;
+		}
+
+		@media(max-width:579px) {
+			bottom: -20px;
 		}
 	}
 
@@ -193,9 +197,7 @@
 
 		}
 
-		@media(max-width:767px) {
-			display: none;
-		}
+
 
 
 	}
@@ -210,10 +212,25 @@
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: .5s;
+	transition: 1s ease-in;
 	display: block;
 }
 
 .success-work__img.active {
-	opacity: 1;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
