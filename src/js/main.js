@@ -193,6 +193,7 @@ $(document).ready(function () {
 		smartSpeed: 1000,
 		mouseDrag: false,
 		dots: false,
+
 		// responsive: {
 		// 	767: {
 		// 		dots: false
@@ -225,6 +226,44 @@ $(document).ready(function () {
 		teamSlider.trigger("prev.owl.carousel");
 		selectPicture(teamSlider, '.team-slide__text', slidePicTeam);
 		selectSerificate();
+	});
+
+
+	//  slider REVIEW
+	let reviewSlider = $('.reviews-slider');
+	let reviewAuthor = $('.review-author__img ');
+	reviewSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		navSpeed: 1200,
+		animateOut: 'fadeOut',
+		mouseDrag: false,
+		// animateIn: 'fadeIn',
+		// animateOut: 'slideOutDown',
+		animateIn: 'flipInX',
+		smartSpeed: 1000,
+		dots: false
+	});
+	$(".review-slider-next").click(function () {
+		reviewSlider.trigger("next.owl.carousel");
+		selectPicture(reviewSlider, '.reviews-text', reviewAuthor);
+
+	});
+	$(".review-slider-prev").click(function () {
+		reviewSlider.trigger("prev.owl.carousel");
+		selectPicture(reviewSlider, '.reviews-text', reviewAuthor);
+	});
+
+	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
+
+	let quote = document.querySelectorAll('.quot-item');
+	window.addEventListener('mousemove', function (e) {
+		let x = e.clientX / window.innerWidth;
+		let y = e.clientY / window.innerHeight;
+		for (let item of quote) {
+			item.style.transform = 'translate(-' + x * 20 + 'px, -' + y * 20 + 'px)';
+		}
+
 	});
 
 	//аккордеон развернуть стрелку

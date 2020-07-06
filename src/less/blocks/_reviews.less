@@ -1,0 +1,111 @@
+.reviews {
+	background-color: @sec4;
+	min-height: 563px;
+	position: relative;
+
+	.title-30 {
+		margin-left: auto;
+		color: @pr;
+		margin-bottom: 60px;
+	}
+
+	.slider-wrapper {
+		z-index: 3;
+		padding-top: 12px;
+
+	}
+}
+
+.reviews:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 49.3%;
+	background-color: #fff;
+	z-index: 2;
+
+}
+
+.review-author {
+	margin-top: -65px;
+	position: relative;
+}
+
+.review-author__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	.img-wrapper {
+		width: 303px;
+		height: 310px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+}
+
+.review-author__img.active {
+	animation-name: fadeIn;
+	animation-duration: 1.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+.review-author .photo-title {
+	p {
+		color: #fff;
+	}
+}
+
+.slider-back {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 60px;
+	padding-right: 40px;
+	padding-left: 45px;
+	background-color: #fff;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+}
+
+.reviews-slider {
+
+	.reviews-text {
+		padding: 5px;
+	}
+}
+
+.quot-left,
+.quot-right {
+	font-size: 94px;
+	font-family: @ff2;
+	color: @ac;
+	position: absolute;
+	z-index: 5;
+}
+
+.quot-left {
+	top: 10px;
+	left: 45px;
+}
+
+.quot-right {
+	bottom: -28px;
+	right: 58px;
+}
+
+.review-slider-arrow .arrow-icon {
+	svg path {
+		fill: #fff;
+	}
+
+	&:hover {
+		svg path {
+			fill: @ac;
+		}
+	}
+}
