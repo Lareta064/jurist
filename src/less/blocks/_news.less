@@ -7,8 +7,18 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	@media(max-width:767px) {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+
 	h2 {
 		margin-bottom: 70px;
+
+		@media(max-width:767px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 
@@ -22,6 +32,9 @@
 	padding: 30px;
 	padding-right: 50px;
 	margin-bottom: 30px;
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto;
 
 	&:hover {
 		background: #F7F7F7;
@@ -37,6 +50,15 @@
 		line-height: 28px;
 		color: @pr;
 		font-weight: 600;
+
+		@media(max-width:1199px) {
+			font-size: 16px;
+			line-height: 26px;
+		}
+
+		@media(max-width:767px) {
+			font-size: 18px;
+		}
 	}
 
 	.news-link {
