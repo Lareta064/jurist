@@ -4,6 +4,11 @@
 	padding-bottom: 100px;
 	position: relative;
 	min-height: 735px;
+
+	@media(max-width: 991px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .feedback:after {
@@ -19,6 +24,11 @@
 	background-size: cover;
 	background-position: 0 0;
 	background-repeat: no-repeat;
+
+	@media(max-width: 991px) {
+		width: 100%;
+		bottom: 52%;
+	}
 }
 
 .feedback:before {
@@ -30,6 +40,11 @@
 	left: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, .65);
+
+	@media(max-width: 991px) {
+		width: 100%;
+		bottom: 52%;
+	}
 }
 
 .feedback-content {
@@ -49,7 +64,7 @@
 	}
 
 	.service-list {
-		margin-top: 60px;
+		margin-top: 40px;
 
 		li {
 			position: relative;
@@ -76,21 +91,50 @@
 		&+.button {
 			margin-top: 60px;
 			display: inline-block;
+			width: 280px;
+			text-align: center;
 		}
 
 	}
 }
 
+.feedback-text {
+	@media(max-width:991px) {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 60px;
+	}
+}
+
 .feedback-column {
 	.feedback-form {
-		padding-left: 80px;
+		padding-left: 75px;
+		max-width: 100%;
 
 		h2 {
 			margin-bottom: 20px;
+
 		}
 
 		form {
-			margin-top: 60px;
+			margin-top: 50px;
+
+
+			.button {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		@media(max-width: 1199px) {
+			padding-left: 30px;
+		}
+
+		@media(max-width: 991px) {
+			padding-left: 0;
+			padding-top: 60px;
+			max-width: 490px;
 		}
 	}
 }
