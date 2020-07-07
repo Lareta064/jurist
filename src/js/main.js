@@ -253,6 +253,27 @@ $(document).ready(function () {
 		reviewSlider.trigger("prev.owl.carousel");
 		selectPicture(reviewSlider, '.reviews-text', reviewAuthor);
 	});
+	// SLIDER PARTNERS
+
+	$('.partners-logo').owlCarousel({
+		items: 1,
+		loop: true,
+		dots: true,
+		dotsSpeed: 800,
+		smartSpeed: 800,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+
+		responsive: {
+			425: {
+				items: 2
+			},
+			600: {
+				items: 3
+			}
+		}
+	})
 
 	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
 
