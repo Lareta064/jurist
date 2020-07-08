@@ -6,9 +6,9 @@ mixin btn(tag, text, link, addClass, madalName)
 			a(href=" "+ link ).button #{text}
 	else
 		if addClass
-			#{tag}.button.button-light(data-target="modal" data-role=" "+ madalName) #{text}
+			#{tag}.button.button-light(data-toggle="modal" data-target=" "+ madalName) #{text}
 		else
-			#{tag}.button(data-target="modal" data-role=" "+ madalName) #{text}
+			#{tag}.button(data-toggle="modal" data-target=" "+ madalName) #{text}
 
 //- header top
 mixin headerTop
