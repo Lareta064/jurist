@@ -11,7 +11,7 @@ mixin btn(tag, text, link, addClass, madalName)
 			#{tag}.button(data-toggle="modal" data-target=" "+ madalName) #{text}
 
 //- header top
-mixin headerTop
+mixin headerTop(objData)
 	.header-top
 		.container
 			.header-top__content
@@ -21,31 +21,30 @@ mixin headerTop
 						p Андреев & Панфилов
 						p Услуги опытных юристов
 				nav.nav-menu
-					a(href="#").nav-menu__item Услуги адвоката
-					a(href="#").nav-menu__item Схема работы
-					a(href="#").nav-menu__item Результаты дел
-					a(href="#").nav-menu__item Наша команда 
-					a(href="#").nav-menu__item Цены
-					a(href="#").nav-menu__item Контакты
+					each item in objData.nav
+						if item.activeClass
+							a(href=" "+ item.link class="nav-menu__item active") #{item.title}
+						else
+							a(href=" "+ item.link class="nav-menu__item") #{item.title}
+
 					+btn('button', 'Запрос адвокату', '', 'light', '#application')
-					+socialIcons
+					+socialIconsForObj(objData.socials)
 				.header-button
 					+btn('button', 'Запрос адвокату', '', 'light', '#application')
 				.menu-toggle
 					span
+
 //- icon-social
-mixin socialIcons
+mixin socialIconsForObj(items)
 	.icon-block
-		a(href="#!")
-			i.fab.fa-telegram-plane
-		a(href="#!")
-			i.fab.fa-facebook-f
-		a(href="#!")
-			i.fab.fa-whatsapp
-		a(href="#!")
-			i.fab.fa-instagram
-		a(href="#!")
-			i.fab.fa-vk
+		each item in items
+			a(href="#!")
+				i(class=" " + item.type)
+mixin socialIcons(...items)
+	.icon-block
+		each item in items
+			a(href="#!")
+				i(class=" " + item)
 
 mixin schemeCard(num, title, text)
 	.scheme-card
