@@ -1,0 +1,15 @@
+#overlay
+header.header.header-inner(style="background-image: url(img/servicePage.jpg)")
+	.container
+		+headerTop({nav:[{link:'services.html', title: 'Услуги адвоката', activeClass:'active'},
+		 {link:'index.html', title: 'Схема работы'},
+		 {link:'resultes.html', title: 'Результаты дел'},
+		 {link:'our-team.html', title: 'Наша команда'},
+		 {link:'price.html', title: 'Цены'},
+		 {link:'contacts.html', title: 'Контакты'},
+		 ],
+		 socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
+		 })
+		.header-center
+			h1.title-2 Услуги
+		+socialIcons( 'fab fa-whatsapp','fab fa-skype', 'fas fa-video')

@@ -1,11 +1,21 @@
 #overlay
 header.header(style="background-image:url(img/mainBg.jpg);")
 	.container
-		+headerTop
+		+headerTop({nav:[
+		 {link:'services.html', title: 'Услуги адвоката'},
+		 {link:'index.html', title: 'Схема работы', activeClass:'active'},
+		 {link:'resultes.html', title: 'Результаты дел'},
+		 {link:'our-team.html', title: 'Наша команда'},
+		 {link:'price.html', title: 'Цены'},
+		 {link:'contacts.html', title: 'Контакты'},
+		 ], 
+		 socials:[{type:'fab fa-telegram-plane'}, {type:'fab fa-facebook-f'}, {type:'fab fa-whatsapp'}, {type:'fab fa-instagram'}, {type:'fab fa-vk'}]
+		 })
 		.header-center
 			h2.head-2.title-decore Представление интересов в суде
 			h1.title-1 Опытные юристы в&nbsp;Саратове
 			p.subtitle Юридический стаж более 10 лет.
 			.header-center__btn
-				+btn('button', 'Заказать консультацию', '', 'light')
-	+socialIcons
+				+btn('button', 'Заказать консультацию', '', 'light','#consultantModal')
+				
+	+socialIcons('fab fa-telegram-plane', 'fab fa-facebook-f', 'fab fa-whatsapp', 'fab fa-instagram', 'fab fa-vk')

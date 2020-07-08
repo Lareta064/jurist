@@ -1,0 +1,43 @@
+section.feedback
+	.container
+		.feedback-content
+			.row
+				.col-lg-6
+					.feedback-column.feedback-text
+						h3.title-3 Закажите консультацию юриста в Саратове
+						p Мы проконсультируем вас и максимально ответим на все ваши любые вопросы:
+						.service-list
+							ul
+								li Гражданское право
+								li Семейное право
+								li Уголовное право
+								li Трудовое право
+						+btn('button','Заказать консультацию', '','', '#consultantModal' )
+						
+				.col-lg-6
+					.feedback-column
+						.feedback-form.dark-form
+							h2.head-2 Или задайте свой вопрос юристу:
+							p Наш юрист свяжется с вами в течении 24 часов
+							form
+								.form-group
+									input(type="text" name="userName" )
+									span.fake-placeholder Имя
+									span.error-notify
+									span.error-text Введите имя
+								.form-group
+									input(type="text" name="userPhone"  class="phone")
+									span.fake-placeholder Телефон
+									span.error-notify
+									span.error-text Введите номер телефона
+								.form-group
+									textarea(name="message")
+									span.fake-placeholder Сообщение
+
+								.form-group.agree-text
+									label(class="form-label")
+										input(class="form-checkbox" type="checkbox" name="agreePolitic")
+										span.custom-checkbox
+										| Принимаю  #[a(href="#") условия обработки] моих данных.
+								.form-group
+									button.button.button-light(type="submit" ) Отправить

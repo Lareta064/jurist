@@ -116,13 +116,13 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		// mouseDrag: false,
-		dots: true,
-		responsive: {
-			767: {
-				dots: false
-			}
-		}
+		mouseDrag: false,
+		dots: false
+		// responsive: {
+		// 	767: {
+		// 		dots: false
+		// 	}
+		// }
 	});
 	// add animate.css class(es) to the elements to be animated
 	function setAnimation(_elem, _InOut) {
@@ -154,7 +154,8 @@ $(document).ready(function () {
 		var $elemsToanim = $currentItem.find("[data-animation-in]");
 		setAnimation($elemsToanim, 'in');
 	});
-	//-function select picture for slide
+
+	//-function SELECT IMAGE for slide
 	function selectPicture(slider, activeSlideClass, picturClass) {
 		let activeSlide = slider.find('.owl-item.active ' + activeSlideClass)
 		let activeSlideData = activeSlide.data('index');
@@ -190,20 +191,100 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		// mouseDrag: false,
-		dots: true,
-		responsive: {
-			767: {
-				dots: false
-			}
-		}
+		mouseDrag: false,
+		dots: false,
+
+		// responsive: {
+		// 	767: {
+		// 		dots: false
+		// 	}
+		// }
 	})
+
+	let slidePicTeam = $('.team-slide__img');
+	let teammateSertificate = $('.certificate');
+
+	function selectSerificate() {
+		let activeTeamSlide = teamSlider.find('.owl-item.active .team-slide__text')
+		let activeTeamSlideData = activeTeamSlide.data('index');
+		teammateSertificate.each(function (item) {
+			$(this).removeClass('active')
+			let sertificateData = $(this).attr('data-link')
+			if (sertificateData == activeTeamSlideData) {
+				$(this).addClass('active')
+			}
+
+		})
+	}
 	$(".team-slider-next").click(function () {
 		teamSlider.trigger("next.owl.carousel");
+		selectPicture(teamSlider, '.team-slide__text', slidePicTeam);
+		selectSerificate();
 
 	});
 	$(".team-slider-prev").click(function () {
 		teamSlider.trigger("prev.owl.carousel");
+		selectPicture(teamSlider, '.team-slide__text', slidePicTeam);
+		selectSerificate();
+	});
+
+
+	//  slider REVIEW
+	let reviewSlider = $('.reviews-slider');
+	let reviewAuthor = $('.review-author__img ');
+	reviewSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		navSpeed: 1200,
+		animateOut: 'fadeOut',
+		mouseDrag: false,
+		// animateIn: 'fadeIn',
+		// animateOut: 'slideOutDown',
+		animateIn: 'flipInX',
+		smartSpeed: 1000,
+		dots: false
+	});
+	$(".review-slider-next").click(function () {
+		reviewSlider.trigger("next.owl.carousel");
+		selectPicture(reviewSlider, '.reviews-text', reviewAuthor);
+
+	});
+	$(".review-slider-prev").click(function () {
+		reviewSlider.trigger("prev.owl.carousel");
+		selectPicture(reviewSlider, '.reviews-text', reviewAuthor);
+	});
+	// SLIDER PARTNERS
+
+	$('.partners-logo').owlCarousel({
+		items: 1,
+		loop: true,
+		dots: true,
+		dotsSpeed: 800,
+		smartSpeed: 800,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+
+		responsive: {
+			425: {
+				items: 2
+			},
+			600: {
+				items: 3
+			}
+		}
+	})
+
+	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
+
+	let quote = document.querySelectorAll('.quot-item');
+	window.addEventListener('mousemove', function (e) {
+		let x = e.clientX / window.innerWidth;
+		let y = e.clientY / window.innerHeight;
+		for (let item of quote) {
+			item.style.transform = 'translate(-' + x * 20 + 'px, -' + y * 20 + 'px)';
+		}
+
 	});
 
 	//аккордеон развернуть стрелку

@@ -1,0 +1,87 @@
+.modal-backdrop {
+	opacity: .6 !important;
+	// backdrop-filter: blur(5px);
+	background-color: rgb(70, 65, 38);
+}
+
+.modal .modal-body {
+	color: #fff;
+
+	.modal-form-head {
+		margin-bottom: 60px;
+		text-align: center;
+
+		h3 {
+			.title-3;
+			max-width: 100%;
+			font-weight: 400;
+			margin-bottom: 20px;
+		}
+
+		p {
+
+			max-width: 40ch;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+	}
+}
+
+#application .modal-body {
+	h3 {
+		.head-2;
+		max-width: 100%;
+
+		margin-bottom: 20px;
+	}
+}
+
+.modal .modal-dialog {
+	position: relative;
+
+	button.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		box-shadow: none;
+		border: 0px;
+
+		span {
+			display: inline-block;
+			transform: rotate(45deg);
+			font-size: 50px;
+			color: @ac;
+			font-weight: 400;
+			text-shadow: none;
+		}
+	}
+}
+
+.formModal .modal-dialog {
+	max-width: 790px;
+	width: 70%;
+
+	@media(max-width:767px) {
+		width: 95%;
+	}
+}
+
+.formModal .modal-content {
+	background-color: #3B3B3B;
+}
+
+.formModal .modal-content {
+
+	padding: 80px 120px;
+	border-radius: 0;
+	border: 0px;
+}
+
+#consultantModal .modal-content {
+	background-image: url(../img/modalBg1.jpg);
+	background-size: cover;
+	background-position: top right;
+	background-repeat: no-repeat;
+}

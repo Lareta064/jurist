@@ -1,0 +1,20 @@
+footer.footer
+	.footer-social
+		+socialIcons('fab fa-telegram-plane', 'fab fa-facebook-f', 'fab fa-whatsapp', 'fab fa-instagram', 'fab fa-vk')
+	.footer-address
+		p 178452, Саратов, Мытнинская наб., д.13
+	.footer-contacts
+		a(href="tel:89998887766").footer-contacts-tel
+			span
+				+phone
+			span +7(999)888-77-66
+		a(href="mailto:info@gmail.com").footer-contacts-email
+			span
+				+email
+			span info@gmail.com
+	.footer-copyright 
+		span &copy; 2020 Россия, 
+		span Саратов, ОО Андреев & Панфилов
+	.footer-links
+		a(href="#!").politic-text Политика конфеденциальности
+		a(href="#!").rules-text Правила пользования

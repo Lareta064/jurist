@@ -1,6 +1,6 @@
 .success {
 	padding-top: 100px;
-	padding-bottom: 120px;
+	padding-bottom: 180px;
 	background-color: @sec1;
 
 	@media(max-width:1199px) {
@@ -61,7 +61,7 @@
 .success-work__text {
 	padding-left: 30px;
 	max-width: 515px;
-	padding-top: 80px;
+	padding-top: 95px;
 
 	@media(max-width:1199px) {
 		padding-top: 0;
@@ -168,7 +168,11 @@
 			left: auto;
 			right: 0px;
 
-			bottom: -5px;
+			bottom: 0px;
+		}
+
+		@media(max-width:579px) {
+			bottom: -20px;
 		}
 	}
 
@@ -193,9 +197,7 @@
 
 		}
 
-		@media(max-width:767px) {
-			display: none;
-		}
+
 
 
 	}
@@ -210,10 +212,15 @@
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: .5s;
+	transition: 1s ease-in;
 	display: block;
 }
 
 .success-work__img.active {
-	opacity: 1;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+
+
 }
