@@ -59,7 +59,41 @@ mixin newCard(data, hasTag, title)
 				span #{data}
 				span ##{hasTag}
 			h4 #{title}
-			p.news-link Читать
+			p.card-link.card-link--news Читать
+mixin brcr
+	.brcrumg
+		.brcrumg-item
+			a(href="#") Главная
+		.brcrumg-item.brcrumg-item--drop
+			a(href="#") Услуги
+			.drop-block
+				a(href="one-service.html") Юридическая консультация 
+				a(href="one-service.html") Подготовка юридических документов
+				a(href="one-service.html") Арбитражные дела 
+				a(href="one-service.html") Банковские споры 
+				a(href="one-service.html") Банкротство физических лиц 
+				a(href="one-service.html") Взыскание долга 
+				a(href="one-service.html") Дела о наследовании 
+				a(href="one-service.html") Защита прав потребителей 
+				a(href="one-service.html") Жилищные споры 
+				a(href="one-service.html") Налоговые вычеты 
+				a(href="one-service.html") Семейные споры
+
+mixin serviceCard
+	.col-sm-6.col-xl-4
+		.service-card
+			a(href="#!").service-card_top
+				.service-card__head
+					.type-item
+						.type-icon
+							+dir2
+						.type-text
+							p Расторжение брака и раздел имущества
+				.service-card__body
+					p Наш юрист по разводам качественно и оперативно окажет услуги по оформлению этой неприятной процедуры: соберет документы для развода через суд, составит соглашение о разделе имущества...
+					.card-link.card-link--service  Подробнее
+			.service-card__footer
+				+btn('button','Заказать консультацию', '','light', '#consultantModal' )
 //- SVG ICONS
 mixin arrow
 	<svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
