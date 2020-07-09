@@ -1,5 +1,16 @@
 .service-cards {
 	padding-bottom: 375px;
+	padding-top: 30px;
+
+	@media(max-width:1199px) {
+		padding-bottom: 90px;
+	}
+
+	@media(max-width:991px) {
+		padding-top: 10px;
+		padding-bottom: 70px;
+	}
+
 }
 
 .service-cards__wrapper {
@@ -22,6 +33,12 @@
 	background: #FFFFFF;
 	border: 1px solid #F0F0F0;
 	margin-bottom: 30px;
+
+	@media(max-width:767px) {
+		height: auto;
+	}
+
+
 
 
 
@@ -70,6 +87,16 @@
 	border: 1px solid #F0F0F0;
 	border-bottom: 0px;
 	.tr;
+
+	@media(max-width:767px) {
+		height: auto;
+		margin-bottom: 15px;
+	}
+
+	@media(max-width:424px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 	&:hover {
 		border: 1px solid @ac;

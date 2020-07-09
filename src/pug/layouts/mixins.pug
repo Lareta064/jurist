@@ -79,18 +79,18 @@ mixin brcr
 				a(href="one-service.html") Налоговые вычеты 
 				a(href="one-service.html") Семейные споры
 
-mixin serviceCard
+mixin serviceCard(iconDir, title, text)
 	.col-md-6.col-xl-4
 		.service-card
 			a(href="#!").service-card_top
 				.service-card__head
 					.type-item
 						.type-icon
-							+dir2
+							+#{iconDir}
 						.type-text
-							p Расторжение брака и раздел имущества
+							p #{title}
 				.service-card__body
-					p Наш юрист по разводам качественно и оперативно окажет услуги по оформлению этой неприятной процедуры: соберет документы для развода через суд, составит соглашение о разделе имущества...
+					p !{text}
 					.card-link.card-link--service  Подробнее
 			.service-card__footer
 				+btn('button','Заказать консультацию', '','light', '#consultantModal' )
