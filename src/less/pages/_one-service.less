@@ -1,0 +1,100 @@
+.one-service {
+	.title-30 {
+		margin-bottom: 77px;
+	}
+}
+
+.teammate-card {
+	overflow: hidden;
+	padding-bottom: 20px;
+
+	.teammate-photo {
+		margin-bottom: 20px;
+		transition: .7s;
+	}
+
+	.photo-title {
+		h4 {
+			font-family: @ff2;
+			font-size: 16px;
+			line-height: 21px;
+			margin-bottom: 10px;
+			transition: .5s;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+
+	&:hover .teammate-photo {
+		transform: scale(1.03);
+		transition: .7s;
+	}
+
+	&:hover h4 {
+		color: @ac;
+	}
+}
+
+.service-cost-card {
+	background: #FFFFFF;
+	border: 1px solid @ac;
+	max-width: 380px;
+	min-height: 350px;
+	padding: 11px 20px;
+
+	.service-cost-head {
+		border-bottom: 1px solid @ac;
+		padding-bottom: 25px;
+		text-align: center;
+	}
+
+	.service-cost-head span:first-child {
+		.title-2;
+		margin-right: 15px;
+	}
+
+	.service-cost-head span:last-child {
+		.title-30;
+		position: relative;
+		top: -3px;
+	}
+
+	.service-cost-body {
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid @ac;
+
+		span {
+			.head-2;
+			font-weight: 700;
+		}
+	}
+
+	.service-cost-footer {
+		height: 130px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			color: @sec2;
+			text-align: center;
+
+		}
+	}
+}
+
+.one-service-description {
+	.marker-list {
+		li {
+			padding-left: 36px;
+			margin-bottom: 30px;
+		}
+	}
+}

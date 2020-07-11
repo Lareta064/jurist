@@ -69,13 +69,10 @@
 	}
 }
 
-.service-cost-list {
+.marker-list {
 	li {
 		position: relative;
-		padding-left: 56px;
-		padding-bottom: 20px;
-		margin-bottom: 20px;
-
+		padding-left: 36px;
 	}
 
 	li:after {
@@ -85,12 +82,39 @@
 		top: 2px;
 		width: 26px;
 		height: 20px;
-		background: url(../img/check.svg);
+		background-image: url(../img/check.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+	}
+
+}
+
+.marker-list--circle {
+	li {
+		margin-bottom: 15px;
+	}
+
+	li:after {
+		background-image: none;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: @ac;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.service-cost-list {
+	li {
+
+
+		padding-bottom: 20px;
+		margin-bottom: 20px;
 
 	}
+
 
 	li:before {
 		content: '';
@@ -100,8 +124,5 @@
 		right: 0;
 		height: 1px;
 		background-color: #E0E0E0;
-
-
-
 	}
 }

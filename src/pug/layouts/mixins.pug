@@ -35,18 +35,9 @@ mixin headerTop(objData)
 					span
 
 //INNER-HEADER 
-mixin innerHeader(title, navData)
-	header.header.header-inner(style="background-image: url(img/servicePage.jpg)")
+mixin innerHeader(title, navData, img)
+	header.header.header-inner(style="background-image: url(img/header/"+img+".jpg)")
 		+headerTop(navData)
-		//- +headerTop({nav:[{link:'services.html', title: 'Услуги адвоката', activeClass:'active'},
-		//- 	{link:'index.html', title: 'Схема работы'},
-		//- 	{link:'resultes.html', title: 'Результаты дел'},
-		//- 	{link:'our-team.html', title: 'Наша команда'},
-		//- 	{link:'price.html', title: 'Цены'},
-		//- 	{link:'contacts.html', title: 'Контакты'},
-		//- 	],
-		//- 	socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
-		//- 	})
 		.container
 			.header-center
 				h1.title-2 !{title}
@@ -78,6 +69,26 @@ mixin newCard(data, hasTag, title)
 				span ##{hasTag}
 			h4 #{title}
 			p.card-link.card-link--news Читать
+
+mixin teammateCard(srcPhoto, name, proff)
+	.col-md-6.col-xl-4
+		.teammate-card
+			.teammate-photo
+				img(src="img/team/"+srcPhoto +".jpg", alt="teammate")
+			.photo-title
+				h4 #{name}
+				p #{proff}
+
+mixin service-cost
+	.col-md-6.col-lg-4
+		.service-cost-card
+			.service-cost-head
+				span 01.
+				span Консультации
+			.service-cost-body
+				span от 2000 Р
+			.service-cost-footer
+				p Консультация юриста по семейным делом продолжительностью до 1 часа
 mixin brcr
 	.brcrumg
 		.brcrumg-item

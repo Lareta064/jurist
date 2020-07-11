@@ -3,6 +3,17 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 440px;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .5);
+	}
 
 	@media(max-width:1199px) {
 		height: 380px;
@@ -22,10 +33,13 @@
 		height: 176px;
 		max-width: 100%;
 		width: 100%;
+		position: relative;
+		z-index: 1;
 	}
 
 	.icon-block {
 		position: relative;
+		z-index: 1;
 		margin-top: 100px;
 		justify-content: flex-start;
 		transform: translateX(0);
