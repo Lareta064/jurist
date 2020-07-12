@@ -1,16 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-	+innerHeader('Услуги', {nav:[{link:'services.html', title: 'Услуги адвоката', activeClass:'active'},
+	+innerHeader('Услуги', {nav:[{link:'services.html', title: 'Услуги', activeClass:'active'},
 		{link:'index.html', title: 'Схема работы'},
 		{link:'resultes.html', title: 'Результаты дел'},
 		{link:'our-team.html', title: 'Наша команда'},
-		{link:'price.html', title: 'Цены'},
+		{link:'price.html', title: 'Статьи'},
 		{link:'contacts.html', title: 'Контакты'},
 		],
 		socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
 		}, 'servicePage')
-	//- include ../sections/_inner-header.pug
 	include ../sections/_service-cards.pug	
 	include ../sections/_service-cost.pug	
 	include ../sections/_footer-form.pug

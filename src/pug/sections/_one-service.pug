@@ -1,25 +1,14 @@
-section.one-service.inner-section
+include _one-service-team.pug
+include _one-service-description.pug
+
+section
 	.container
-		+brcr
-		h2.title-30.title-decore Наши юристы по семейным делам:
-		.one-service-team
-			.row
-				+teammateCard('team3', 'Александр Парфенов', 'Юрист')
-				+teammateCard('team4', 'Елена Афанасьева', 'Адвокат')
-				+teammateCard('team5', 'Александр Парфенов', 'Юрист')
-		
 		.row
 			+service-cost
 			+service-cost
 			+service-cost
-		.one-service-description
-			.marker-list
-				ul
-					li Осуществляем правовой анализ возникшего спора.
-					li Осуществляем правовой анализ возникшего спора.
-					li Осуществляем правовой анализ возникшего спора.
-					li Осуществляем правовой анализ возникшего спора.
-					li Осуществляем правовой анализ возникшего спора.
+		
+			
 		.marker-list.marker-list--circle
 			ul
 				li Фиксированная стоимость при условии аванса
