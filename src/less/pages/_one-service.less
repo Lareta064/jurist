@@ -13,6 +13,10 @@
 	overflow: hidden;
 	padding-bottom: 20px;
 
+	@media(max-width:991px) {
+		margin-bottom: 30px;
+	}
+
 	.teammate-photo {
 		margin-bottom: 20px;
 		transition: .7s;
@@ -41,6 +45,15 @@
 
 	&:hover h4 {
 		color: @ac;
+	}
+}
+
+.one-service-cost {
+	// padding-top: 150px;
+	// padding-bottom: 150px;
+
+	.title-30 {
+		margin-bottom: 90px;
 	}
 }
 
@@ -77,12 +90,15 @@
 
 		span {
 			.head-2;
-			font-weight: 700;
+			// font-weight: 700;
+			font-weight: 600;
+			transition: 1s;
+
 		}
 	}
 
 	.service-cost-footer {
-		height: 130px;
+		height: 110px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -95,11 +111,21 @@
 	}
 }
 
+.service-cost-card:hover .service-cost-body span {
+	transform: rotateY(360deg);
+	color: @ac;
+}
+
 .one-service-description {
 	background-color: @sec1;
 	padding-top: 370px;
-	padding-bottom: 150px;
+	padding-bottom: 120px;
 	margin-top: -277px;
+
+	@media(max-width:767px) {
+		padding-top: 50px;
+		margin-top: 0;
+	}
 
 	.title-30 {
 		margin-bottom: 60px;
@@ -120,5 +146,3 @@
 		}
 	}
 }
-
-.benefits-wrapper {}

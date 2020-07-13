@@ -79,16 +79,16 @@ mixin teammateCard(srcPhoto, name, proff)
 				h4 #{name}
 				p #{proff}
 
-mixin service-cost
+mixin service-cost(title, price, desk)
 	.col-md-6.col-lg-4
 		.service-cost-card
 			.service-cost-head
 				span 01.
-				span Консультации
+				span #{title}
 			.service-cost-body
-				span от 2000 Р
+				span от #{price} Р
 			.service-cost-footer
-				p Консультация юриста по семейным делом продолжительностью до 1 часа
+				p !{desk}
 mixin brcr
 	.brcrumg
 		.brcrumg-item
