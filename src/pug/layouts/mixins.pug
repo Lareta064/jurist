@@ -123,6 +123,28 @@ mixin serviceCard(iconDir, title, text)
 					.card-link.card-link--service  Подробнее
 			.service-card__footer
 				+btn('button','Заказать консультацию', '','light', '#consultantModal' )
+//section PARTNERS
+mixin partners
+	section.partners&attributes(attributes)
+		.container-fluid
+			.d-block.d-lg-none.partners-logo.owl-carousel
+				.partners-logo__img(style="background-image:url(img/partner1.png)")
+				.partners-logo__img(style="background-image:url(img/partner2.png)")
+				.partners-logo__img(style="background-image:url(img/partner3.png)")
+				.partners-logo__img(style="background-image:url(img/partner4.png)")
+				.partners-logo__img(style="background-image:url(img/partner5.png)")
+					
+			.d-none.d-lg-flex.partners-static-block
+				img(src="img/partner1.png", alt="partner logo")
+			
+				img(src="img/partner2.png", alt="partner logo")
+			
+				img(src="img/partner3.png", alt="partner logo")
+		
+				img(src="img/partner4.png", alt="partner logo")
+			
+				img(src="img/partner5.png", alt="partner logo")
+
 //- SVG ICONS
 mixin arrow
 	<svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
