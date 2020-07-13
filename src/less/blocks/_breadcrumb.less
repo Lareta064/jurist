@@ -72,15 +72,25 @@
 
 .brcrumg-item {
 	position: relative;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	// padding-top: 6px;
+	// padding-bottom: 6px;
 	font-size: 12px;
 	line-height: 22px;
 
+	&+& {
+		margin-left: 15px;
+	}
+
 	&:after {
-		content: '|';
-		margin-left: 7px;
-		margin-right: 7px;
+		content: '';
+
+		width: 1px;
+		height: 14px;
+		background-color: rgba(128, 128, 128, .7);
+		position: absolute;
+		right: -9px;
+		top: 4px;
+
 
 	}
 
@@ -92,8 +102,15 @@
 		}
 
 		a {
-			color: @ac;
+			color: @sec2;
+			opacity: .7;
 
+
+
+		}
+
+		&:after {
+			color: @sec2;
 		}
 
 	}
@@ -106,10 +123,9 @@
 }
 
 .brcrumg-item:last-child {
-	cursor: default;
-
 	a {
 		color: @pr;
+		cursor: default;
 	}
 
 	&:after {
@@ -118,11 +134,21 @@
 
 	&:hover {
 		color: @pr;
+
+		a {
+			opacity: 1;
+		}
+
 	}
 }
 
 .brcrumg-item--drop {
 	position: relative;
+	min-width: 50px;
+
+	&:after {
+		// margin-left: 20px;
+	}
 
 }
 
@@ -134,8 +160,10 @@
 	border-bottom: 1px solid @sec2;
 	transform: rotate(45deg);
 	position: absolute;
-	top: 14px;
-	right: -12px;
+	top: 8px;
+	// right: -12px;
+	// right: 20px;
+	right: 0px;
 
 
 }

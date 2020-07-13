@@ -1,0 +1,75 @@
+.pagination-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	margin-top: 12px;
+}
+
+.pagination-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@media (max-width: 767px) {
+	.pagination-block {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+}
+
+.pagination-block button {
+	width: 25px;
+	height: 25px;
+	background: #FFFFFF;
+	border: 1px solid #f0f0f0;
+	color: #BFBFBF;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	line-height: 22px;
+	cursor: pointer;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.pagination-block button:first-child {
+	border-radius: 2px 0 0 2px;
+}
+
+.pagination-block button:last-child {
+	border-radius: 0 2px 2px 0;
+}
+
+.pagination-block button span path {
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.pagination-block button.active {
+	font-weight: 700;
+	color: @ac;
+	border: 1px solid @ac;
+}
+
+.pagination-block button.active span path {
+	stroke: @ac;
+	stroke-width: 2px;
+}
+
+.pagination-block button:hover {
+	color: @ac;
+}
+
+.pagination-block button:hover span path {
+	stroke: @ac;
+}

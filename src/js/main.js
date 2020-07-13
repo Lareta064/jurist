@@ -1,4 +1,13 @@
 $(document).ready(function () {
+	/* MIXITUP3*/
+	let containerEl = document.querySelector('.news-tabs__content');
+	if (containerEl) {
+		let mixer = mixitup(containerEl, {
+			classNames: {
+				block: ""
+			}
+		})
+	}
 
 	const menuToggle = document.querySelector('.menu-toggle');
 	const mobMenu = document.querySelector('.nav-menu');
@@ -296,4 +305,6 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
+
+
 })
