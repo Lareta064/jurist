@@ -61,9 +61,16 @@ mixin schemeCard(num, title, text)
 		p.scheme-card-title #{title}
 		p.scheme-card-text !{text}
 
+mixin oneNewCard(data, hasTag, title, cat)
+	a(href="#" class="news-card mix "+ cat)
+		.news-card-head
+			span #{data}
+			span ##{hasTag}
+		h4 #{title}
+		p.card-link.card-link--news Читать
 mixin newCard(data, hasTag, title)
 	.col-md-6.col-lg-4
-		a(href="one-news.html").news-card
+		a(href="one-news.html").news-card&attributes(attributes)
 			.news-card-head
 				span #{data}
 				span ##{hasTag}
