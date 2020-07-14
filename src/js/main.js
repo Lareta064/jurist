@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	/* MIXITUP3*/
-	let containerEl = document.querySelector('.news-tabs__content');
+	let containerEl = document.querySelector('.blog-tabs__content');
 	if (containerEl) {
 		let mixer = mixitup(containerEl, {
 			classNames: {
