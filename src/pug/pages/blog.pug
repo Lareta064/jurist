@@ -1,0 +1,23 @@
+extends ../layouts/layout.pug
+block content
+	#overlay
+	+innerHeader('Новости в юридической сфере', {nav:[{link:'services.html', title: 'Услуги'},
+		{link:'index.html', title: 'Схема работы'},
+		{link:'resultes.html', title: 'Результаты дел'},
+		{link:'our-team.html', title: 'Наша команда'},
+		{link:'blog.html', title: 'Статьи', activeClass:'active'},
+		{link:'contacts.html', title: 'Контакты'},
+		],
+		socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
+		}, 'blog')
+	
+	include ../sections/_one-news-tabs.pug
+	include ../sections/_footer-form.pug
+	
+	+partners
+	include ../sections/_footer.pug
+	include ../sections/_modals.pug
+
+
+block variables
+	-var title = "Страница статьи";
