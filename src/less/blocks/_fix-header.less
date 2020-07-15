@@ -77,6 +77,7 @@
 	flex-direction: column;
 	z-index: 5;
 
+
 }
 
 .fix-navigation a {
@@ -99,4 +100,28 @@
 
 .fix-navigation.active {
 	display: flex;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+@-webkit-keyframes showSlow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes showSlow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }

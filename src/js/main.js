@@ -42,6 +42,7 @@ $(document).ready(function () {
 			bodyEl.classList.remove('noscroll');
 			// mobMenu.classList.remove('active');
 			fixMenu.classList.remove('active');
+			toggleFixMenu.classList.remove('active');
 
 		});
 		// mobMenu.addEventListener('click', function () {
