@@ -41,6 +41,15 @@
 	}
 }
 
+.header-button {
+	display: flex;
+	align-self: center;
+
+	.menu-toggle {
+		margin-left: 30px;
+	}
+}
+
 .header-center {
 	padding-top: 40px;
 	width: 75%;
@@ -99,7 +108,7 @@
 .header-top {
 	height: 130px;
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 
 	@media(max-width:1439px) {
 		height: 100px;
@@ -260,7 +269,7 @@
 }
 
 .header-button {
-	display: block;
+	display: flex;
 
 	.button {
 		padding-left: 30px;
@@ -268,6 +277,9 @@
 	}
 
 	@media(max-width:767px) {
-		display: none;
+		button {
+			display: none;
+		}
+
 	}
 }

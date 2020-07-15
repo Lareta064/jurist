@@ -1,6 +1,8 @@
 extends ../layouts/layout.pug
 
 block content
+	#overlay
+	include ../sections/_fix-header.pug
 	+innerHeader('Услуги', {nav:[{link:'services.html', title: 'Услуги', activeClass:'active'},
 		{link:'index.html', title: 'Схема работы'},
 		{link:'resultes.html', title: 'Результаты дел'},

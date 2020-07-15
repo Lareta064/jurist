@@ -1,16 +1,15 @@
-#overlay
 header.header(style="background-image:url(img/header/mainBg.jpg);")
+	+headerTop({nav:[
+		{link:'services.html', title: 'Услуги'},
+		{link:'index.html', title: 'Схема работы', activeClass:'active'},
+		{link:'resultes.html', title: 'Результаты дел'},
+		{link:'our-team.html', title: 'Наша команда'},
+		{link:'blog.html', title: 'Статьи'},
+		{link:'contacts.html', title: 'Контакты'},
+		], 
+		socials:[{type:'fab fa-telegram-plane'}, {type:'fab fa-facebook-f'}, {type:'fab fa-whatsapp'}, {type:'fab fa-instagram'}, {type:'fab fa-vk'}]
+		})
 	.container
-		+headerTop({nav:[
-		 {link:'services.html', title: 'Услуги'},
-		 {link:'index.html', title: 'Схема работы', activeClass:'active'},
-		 {link:'resultes.html', title: 'Результаты дел'},
-		 {link:'our-team.html', title: 'Наша команда'},
-		 {link:'blog.html', title: 'Статьи'},
-		 {link:'contacts.html', title: 'Контакты'},
-		 ], 
-		 socials:[{type:'fab fa-telegram-plane'}, {type:'fab fa-facebook-f'}, {type:'fab fa-whatsapp'}, {type:'fab fa-instagram'}, {type:'fab fa-vk'}]
-		 })
 		.header-center
 			h2.head-2.title-decore Представление интересов в суде
 			h1.title-1 Опытные юристы в&nbsp;Саратове
