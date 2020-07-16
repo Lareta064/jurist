@@ -1,0 +1,29 @@
+section.contacts.inner-section
+	.container
+		// хлебные крошки
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="contacts.html") Контакты
+	.map
+		.container
+			.contacts-card
+				.contacts-card__img
+					img(src="img/contactsCard.jpg", alt="image")
+				.contacts-card__content
+					.address-item
+						span
+							+map
+						p 178452, Саратов, Мытнинская наб., д.13
+					a(href="tel:89998887766").address-item
+						span
+							+phone
+						span +7(999)888-77-66
+					a(href="mailto:info@gmail.com").address-item
+						span
+							+email
+						span info@gmail.com
+				
+		.map-wrapper
+			iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6d1eecbc7aca11806c0009ed4d0ca8474816987e7339112b985b3b10ec96332&amp;source=constructor" width="100%" height="100%" frameborder="0")

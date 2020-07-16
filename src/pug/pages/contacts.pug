@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	+fixHeader([{link:'servises.html', title: 'Услуги'},{link:'index.html#work-scheme', title: 'Схема работы'},{link:'index.html#success-works', title: 'Результаты дел'},{link:'our-team.html', title: 'Наша команда'},{link:'blog.html', title: 'Статьи'},{link:'contacts', title: 'Контакты', activeClass: 'active'}])
+	+innerHeader('Контакты', {nav:[{link:'services.html', title: 'Услуги'},
+		{link:'index.html', title: 'Схема работы'},
+		{link:'resultes.html', title: 'Результаты дел'},
+		{link:'our-team.html', title: 'Наша команда'},
+		{link:'blog.html', title: 'Статьи'},
+		{link:'contacts.html', title: 'Контакты', activeClass:'active'},
+		],
+		socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
+		}, 'blog')
+	include ../sections/_contacts.pug
+	include ../sections/_footer-form.pug
+	include ../sections/_faq.pug	
+	+partners
+	include ../sections/_footer.pug
+	include ../sections/_modals.pug
+
+
+block variables
+	-var title = "Персональная страница";

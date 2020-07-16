@@ -248,7 +248,8 @@ $(document).ready(function () {
 		smartSpeed: 1000,
 		mouseDrag: false,
 		dots: false,
-
+		// animateIn: 'fadeIn',
+		// animateIn: 'fadeOut',
 		// responsive: {
 		// 	767: {
 		// 		dots: false
