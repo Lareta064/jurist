@@ -8,14 +8,8 @@
 					p Андреев & Панфилов
 					p Услуги опытных юристов
 			.header-fix__button
-				+btn('button', 'Обратный звонок', '', 'light', '#application')
+				a(href="tel:+79999995555") +7 (999) 999-55-44
 				#menu-toggle--fix.menu-toggle
 					span
 nav.fix-navigation
-	a(href="service.html") Услуги
-	a(href="#!") Схема работы
-	a(href="#!") Результаты дел
-	a(href="our-team.html") Наша команда
-	a(href="blog.html") Статьи
-	a(href="contacts.html") Контакты
-	
+	+fixHeaderMenu([{link:'#', title: 'Услуги', activeClass: 'active'},{link:'#', title: 'Схема работы'},{link:'#', title: 'Результаты дел'},{link:'#', title: 'Наша команда'},{link:'#', title: 'Статьи'},{link:'#', title: 'Контакты'}])
