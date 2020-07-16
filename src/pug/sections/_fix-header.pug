@@ -1,0 +1,15 @@
+//- #overlay
+.header-fix
+	.container
+		.header-fix__content
+			a(href="index.html").logo
+				img(src="img/logo.png", alt="logo")
+				.logo-text
+					p Андреев & Панфилов
+					p Услуги опытных юристов
+			.header-fix__button
+				a(href="tel:+79999995555") +7 (999) 999-55-44
+				#menu-toggle--fix.menu-toggle
+					span
+nav.fix-navigation
+	+fixHeaderMenu([{link:'#', title: 'Услуги', activeClass: 'active'},{link:'#', title: 'Схема работы'},{link:'#', title: 'Результаты дел'},{link:'#', title: 'Наша команда'},{link:'#', title: 'Статьи'},{link:'#', title: 'Контакты'}])

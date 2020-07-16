@@ -13,16 +13,24 @@
 	background: @ac;
 	border-radius: 3px;
 	color: @pr;
+	transition: .5s;
 
+
+}
+
+.button:hover {
+	color: @pr;
+	// background: linear-gradient(180deg, #F8C950 0%, #FFBD11 100%);
+	background-color: darken(@ac, 5%);
 
 }
 
 .button.button-light {
 	background-color: transparent;
 	color: @ac;
-}
 
-.button:hover {
-	color: @pr;
-	background: linear-gradient(180deg, #F8C950 0%, #FFBD11 100%);
+	&:hover {
+		background: #F8C950;
+		color: @pr;
+	}
 }

@@ -1,0 +1,151 @@
+.one-service {
+	.title-30 {
+		margin-bottom: 60px;
+	}
+}
+
+.one-service-team {
+	position: relative;
+	z-index: 1;
+}
+
+.teammate-card {
+	overflow: hidden;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	display: block;
+	// @media(max-width:991px) {
+	// 	margin-bottom: 30px;
+	// }
+
+	.teammate-photo {
+		margin-bottom: 20px;
+		transition: .7s;
+	}
+
+	.photo-title {
+		h4 {
+			font-family: @ff2;
+			font-size: 16px;
+			line-height: 21px;
+			margin-bottom: 10px;
+			transition: .5s;
+			color: @pr;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 16px;
+			color: @pr;
+		}
+	}
+
+
+	&:hover .teammate-photo {
+		transform: scale(1.03);
+		transition: .7s;
+	}
+
+	&:hover h4 {
+		color: @ac;
+	}
+}
+
+.one-service-cost {
+	// padding-top: 150px;
+	// padding-bottom: 150px;
+
+	.title-30 {
+		margin-bottom: 90px;
+	}
+}
+
+.service-cost-card {
+	background: #FFFFFF;
+	border: 1px solid @ac;
+	max-width: 380px;
+	min-height: 350px;
+	padding: 11px 20px;
+
+	.service-cost-head {
+		border-bottom: 1px solid @ac;
+		padding-bottom: 25px;
+		text-align: center;
+	}
+
+	.service-cost-head span:first-child {
+		.title-2;
+		margin-right: 15px;
+	}
+
+	.service-cost-head span:last-child {
+		.title-30;
+		position: relative;
+		top: -3px;
+	}
+
+	.service-cost-body {
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid @ac;
+
+		span {
+			.head-2;
+			// font-weight: 700;
+			font-weight: 600;
+			transition: 1s;
+
+		}
+	}
+
+	.service-cost-footer {
+		height: 110px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			color: @sec2;
+			text-align: center;
+
+		}
+	}
+}
+
+.service-cost-card:hover .service-cost-body span {
+	transform: rotateY(360deg);
+	color: @ac;
+}
+
+.one-service-description {
+	background-color: @sec1;
+	padding-top: 370px;
+	padding-bottom: 120px;
+	margin-top: -277px;
+
+	@media(max-width:767px) {
+		padding-top: 50px;
+		margin-top: 0;
+	}
+
+	.title-30 {
+		margin-bottom: 60px;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+
+	.marker-list {
+		li {
+			padding-left: 36px;
+			margin-bottom: 32px;
+			font-size: 13px;
+			line-height: 23px;
+		}
+	}
+}

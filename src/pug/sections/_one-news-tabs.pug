@@ -1,0 +1,78 @@
+section.blog.inner-section
+	.container
+		// хлебные крошки
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная			
+			.brcrumg-item
+				a(href="#!") Статьи
+		.blog-tab
+			//переключатели табов
+			.blog-tabs__controls
+				button.control-active(data-filter="all") Все
+				button(data-filter=".cat1") Услуги
+				button(data-filter=".cat2") Права граждан
+				button(data-filter=".cat3") Семейное право
+				button(data-filter=".cat4") Законы
+				button(data-filter=".cat5") Разъяснения
+			//ЛОК С КАРТОЧКАМИ
+			.blog-tabs__content
+				//одна карточка
+				a(href="blog-one-post.html" class="news-card mix cat1")
+					.news-card-head
+						span 20 мая 2020
+						span #Услуги
+					h4 Существуют ли бесплатные юридические консультации?
+					p.card-link.card-link--news Читать
+				// конец карточки
+				a(href="blog-one-post.html" class="news-card mix cat1")
+					.news-card-head
+						span 21 мая 2020
+						span #Права граждан
+					h4 Несколько вопросов об экспертизе документов.
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat3")
+					.news-card-head
+						span 22 мая 2020
+						span #Семейное право
+					h4 Соглашение о разделе наследства: порядок заключения и содержание.
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat2")
+					.news-card-head
+						span 23 мая 2020
+						span #Права граждан
+					h4 Что нужно знать о разводе?
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat2 ")
+					.news-card-head
+						span 24 мая 2020
+						span #Разъяснения
+					h4 «Аванс» или заработная плата за первую половину месяца 
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat5")
+					.news-card-head
+						span 25 июня 2020
+						span #Права граждан
+					h4 Невыплата заработной платы
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat2")
+					.news-card-head
+						span 26 мая 2020
+						span #Законы 
+					h4 Бесплатное банкротство для россиян откладывается 
+					p.card-link.card-link--news Читать
+				a(href="blog-one-post.html" class="news-card mix cat4")
+					.news-card-head
+						span 27 мая 2020
+						span #Услуги 
+					h4 Поделить имущество после развода можно и спустя больше трех лет
+					p.card-link.card-link--news Читать
+
+				a(href="blog-one-post.html" class="news-card mix cat2")
+					.news-card-head
+						span 28 июня 2020
+						span #Права граждан
+					h4 Как установить отцовство? 
+					p.card-link.card-link--news Читать
+			//пагинация
+			include _pagination.pug

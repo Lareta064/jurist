@@ -1,0 +1,27 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	+fixHeader([{link:'servises.html', title: 'Услуги', activeClass: 'active'},{link:'index.html#work-scheme', title: 'Схема работы'},{link:'index.html#success-works', title: 'Результаты дел'},{link:'our-team.html', title: 'Наша команда'},{link:'blog.html', title: 'Статьи'},{link:'contacts', title: 'Контакты'}])
+	+innerHeader('Расторжение брака и раздел имущества ', {nav:[{link:'services.html', title: 'Услуги', activeClass:'active'},
+		{link:'index.html', title: 'Схема работы'},
+		{link:'resultes.html', title: 'Результаты дел'},
+		{link:'our-team.html', title: 'Наша команда'},
+		{link:'blog.html', title: 'Статьи'},
+		{link:'contacts.html', title: 'Контакты'},
+		],
+		socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
+		}, 'oneServicePage')
+	
+	include ../sections/_one-service.pug
+	include ../sections/_footer-form.pug
+	include ../sections/_info-text.pug
+	include ../sections/_scheme.pug
+	+partners(class="partners--service")
+	//- include ../sections/_partners.pug
+	include ../sections/_footer.pug
+	include ../sections/_modals.pug
+
+
+block variables
+	-var title = "Страница услуги";

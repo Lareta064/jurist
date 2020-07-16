@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	+fixHeader([{link:'#', title: 'Услуги'},{link:'index.html#work-scheme', title: 'Схема работы'},{link:'index.html#success-works', title: 'Результаты дел'},{link:'our-team.html', title: 'Наша команда'},{link:'blog.html', title: 'Статьи', activeClass: 'active'},{link:'contacts', title: 'Контакты'}])
+	+innerHeader('Как установить отцовство? ', {nav:[{link:'services.html', title: 'Услуги'},
+		{link:'index.html', title: 'Схема работы'},
+		{link:'resultes.html', title: 'Результаты дел'},
+		{link:'our-team.html', title: 'Наша команда'},
+		{link:'blog.html', title: 'Статьи', activeClass:'active'},
+		{link:'contacts.html', title: 'Контакты'},
+		],
+		socials:[{type:'fab fa-whatsapp'}, {type:'fab fa-skype'}, {type:'fas fa-video'}]
+		}, 'blog')
+	
+	include ../sections/_blog-one-post.pug
+	include ../sections/_footer-form.pug	
+	+partners(class="partners--service")
+	include ../sections/_footer.pug
+	include ../sections/_modals.pug
+
+
+block variables
+	-var title = "Статья блога";

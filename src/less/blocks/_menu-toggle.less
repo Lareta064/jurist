@@ -1,17 +1,19 @@
+#menu-toggle--fix,
 .menu-toggle {
 	display: none;
 	position: relative;
 	border: 1px solid @ac;
 	padding-left: 8px;
 	padding-right: 8px;
+	z-index: 100;
+
+	width: 52px;
+	height: 52px;
+	position: relative;
 
 	@media(max-width:1199px) {
 		display: block;
-		z-index: 100;
 
-		width: 52px;
-		height: 52px;
-		position: relative;
 	}
 
 	@media(max-width:767px) {
@@ -58,6 +60,7 @@
 	}
 }
 
+#menu-toggle--fix.active,
 .menu-toggle.active {
 	span {
 		background-color: transparent;
@@ -73,5 +76,29 @@
 		bottom: 0px;
 		transform: rotate(-45deg);
 		background-color: @ac;
+	}
+}
+
+#menu-toggle--fix.active {
+	span:after {
+
+		background-color: #fff;
+	}
+
+	span:before {
+
+		background-color: #fff;
+	}
+}
+
+#menu-toggle--fix {
+	display: block;
+	margin-left: 30px;
+	border: 1px solid #ffffff;
+
+	span,
+	span:after,
+	span:before {
+		background-color: #fff;
 	}
 }

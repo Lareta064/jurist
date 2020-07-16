@@ -1,41 +1,96 @@
 $(document).ready(function () {
+	/* MIXITUP3*/
+	let containerEl = document.querySelector('.blog-tabs__content');
+	if (containerEl) {
+		let mixer = mixitup(containerEl, {
+			classNames: {
+				block: ""
+			}
+		})
+	}
 
-	const menuToggle = document.querySelector('.menu-toggle');
+	const menuToggle = document.querySelector('#menu-toggle');
 	const mobMenu = document.querySelector('.nav-menu');
 	const overlayBlock = document.querySelector('#overlay');
 	const backTopButton = document.querySelector('#back-top');
+	//FIX MENU
+	const toggleFixMenu = document.querySelector('#menu-toggle--fix');
+	const fixMenu = document.querySelector('.fix-navigation');
 
 	const bodyEl = document.body;
 	if (menuToggle) {
 		menuToggle.addEventListener('click', function () {
 			if (this.classList.contains('active')) {
 				this.classList.remove('active');
-				mobMenu.classList.remove('active');
-				overlayBlock.classList.remove('active');
+				// mobMenu.classList.remove('active');
+				fixMenu.classList.remove('active');
+				// overlayBlock.classList.remove('active');
 				bodyEl.classList.remove('noscroll');
 
 			} else {
 				this.classList.add('active');
-				mobMenu.classList.add('active');
-				overlayBlock.classList.add('active');
+				// mobMenu.classList.add('active');
+				// overlayBlock.classList.add('active');
+				fixMenu.classList.add('active');
 				bodyEl.classList.add('noscroll');
 
 			}
 		});
 		window.addEventListener('resize', function () {
 			menuToggle.classList.remove('active');
-			overlayBlock.classList.remove('active');
+			// overlayBlock.classList.remove('active');
 			bodyEl.classList.remove('noscroll');
-			mobMenu.classList.remove('active');
+			// mobMenu.classList.remove('active');
+			fixMenu.classList.remove('active');
+			toggleFixMenu.classList.remove('active');
 
 		});
-		mobMenu.addEventListener('click', function () {
+		// mobMenu.addEventListener('click', function () {
+		// 	this.classList.remove('active');
+		// 	menuToggle.classList.remove('active');
+		// 	overlayBlock.classList.remove('active');
+		// 	bodyEl.classList.remove('noscroll');
+
+		// })
+		fixMenu.addEventListener('click', function () {
 			this.classList.remove('active');
 			menuToggle.classList.remove('active');
-			overlayBlock.classList.remove('active');
+			toggleFixMenu.classList.remove('active');
+			// overlayBlock.classList.remove('active');
 			bodyEl.classList.remove('noscroll');
 
 		})
+	}
+
+	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
+	window.addEventListener('scroll', function () {
+		const fixHeaderTop = document.querySelector('.header-fix');
+		if (this.pageYOffset > 50) {
+			fixHeaderTop.classList.add('active')
+		} else {
+			fixHeaderTop.classList.remove('active')
+		}
+	})
+	//Click FixMenuToggle	
+	if (toggleFixMenu) {
+
+		toggleFixMenu.addEventListener('click', function () {
+			console.log('555');
+			if (this.classList.contains('active')) {
+				this.classList.remove('active');
+				fixMenu.classList.remove('active');
+				// overlayBlock.classList.remove('active');
+				bodyEl.classList.remove('noscroll');
+
+			} else {
+				this.classList.add('active');
+				fixMenu.classList.add('active');
+				// overlayBlock.classList.add('active');
+				bodyEl.classList.add('noscroll');
+
+			}
+		});
+
 	}
 	// маска для телефона
 	$(".phone").mask("+7(999)999-99-99");
@@ -238,10 +293,10 @@ $(document).ready(function () {
 		navSpeed: 1200,
 		animateOut: 'fadeOut',
 		mouseDrag: false,
-		// animateIn: 'fadeIn',
+		animateIn: 'fadeIn',
 		// animateOut: 'slideOutDown',
-		animateIn: 'flipInX',
-		smartSpeed: 1000,
+		// animateIn: 'flipInX',
+		smartSpeed: 500,
 		dots: false
 	});
 	$(".review-slider-next").click(function () {
@@ -296,4 +351,7 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
+
+
+
 })

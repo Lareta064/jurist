@@ -1,0 +1,91 @@
+.attention {
+	position: relative;
+	background: #FFFFFF;
+	border: 1px solid @ac;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 152px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	padding-right: 30px;
+}
+
+
+.attention p {
+	max-width: 840px;
+
+	span {
+		font-weight: 700;
+		padding-right: 8px;
+	}
+}
+
+.attention .attention-icon {
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	height: 37px;
+	width: 37px;
+	-webkit-animation-name: rotateElement;
+	animation-name: rotateElement;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotateElement {
+	0% {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+
+	50% {
+		-webkit-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+	}
+
+	100% {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes rotateElement {
+	0% {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+
+	50% {
+		-webkit-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+	}
+
+	100% {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+}
+
+@media (max-width: 767px) {
+	.attention {
+		padding-left: 90px;
+		padding-right: 20px;
+		padding-top: 20px;
+
+		.attention-icon {
+			top: 20px;
+			left: 20px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.attention {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 75px;
+
+	}
+}
