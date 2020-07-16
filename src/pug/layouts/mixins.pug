@@ -34,6 +34,31 @@ mixin headerTop(objData)
 					#menu-toggle.menu-toggle
 						span
 
+//fix header
+mixin fixHeader(itemsData)
+	.header-fix
+		.container
+			.header-fix__content
+				a(href="index.html").logo
+					img(src="img/logo.png", alt="logo")
+					.logo-text
+						p Андреев & Панфилов
+						p Услуги опытных юристов
+				.header-fix__button
+					a(href="tel:+79999995555") +7 (999) 999-55-44
+					#menu-toggle--fix.menu-toggle
+						span
+	nav.fix-navigation
+		+fixHeaderMenu(itemsData)
+
+//fix header menu
+mixin fixHeaderMenu(itemsData)
+	each item in itemsData
+		if item.activeClass
+			a(href=" "+ item.link class="active") #{item.title}
+		else
+			a(href=" "+ item.link ) #{item.title}
+
 //INNER-HEADER 
 mixin innerHeader(title, navData, img)
 	header.header.header-inner(style="background-image: url(img/header/"+img+".jpg)")
@@ -79,7 +104,7 @@ mixin newCard(data, hasTag, title)
 
 mixin teammateCard(srcPhoto, name, proff)
 	.col-md-6.col-lg-4
-		.teammate-card
+		a(href="personal.html").teammate-card
 			.teammate-photo
 				img(src="img/team/"+srcPhoto +".jpg", alt="teammate")
 			.photo-title
