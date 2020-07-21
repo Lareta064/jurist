@@ -160,22 +160,65 @@ mixin partners
 	section.partners&attributes(attributes)
 		.container-fluid
 			.d-block.d-lg-none.partners-logo.owl-carousel
-				.partners-logo__img(style="background-image:url(img/partner1.png)")
-				.partners-logo__img(style="background-image:url(img/partner2.png)")
-				.partners-logo__img(style="background-image:url(img/partner3.png)")
-				.partners-logo__img(style="background-image:url(img/partner4.png)")
-				.partners-logo__img(style="background-image:url(img/partner5.png)")
+				.partners-logo__img(style="background-image:url(img/partners/partner1.png)")
+				.partners-logo__img(style="background-image:url(img/partners/partner2.png)")
+				.partners-logo__img(style="background-image:url(img/partners/partner3.png)")
+				.partners-logo__img(style="background-image:url(img/partners/partner4.png)")
+				.partners-logo__img(style="background-image:url(img/partners/partner5.png)")
 					
 			.d-none.d-lg-flex.partners-static-block
-				img(src="img/partner1.png", alt="partner logo")
+				img(src="img/partners/partner1.png", alt="partner")
 			
-				img(src="img/partner2.png", alt="partner logo")
+				img(src="img/partners/partner2.png", alt="partner")
 			
-				img(src="img/partner3.png", alt="partner logo")
+				img(src="img/partners/partner3.png", alt="partner")
 		
-				img(src="img/partner4.png", alt="partner logo")
+				img(src="img/partners/partner4.png", alt="partner")
 			
-				img(src="img/partner5.png", alt="partner logo")
+				img(src="img/partners/partner5.png", alt="partner")
+
+mixin success
+	section.success&attributes(attributes)
+		.container
+			.success-content
+				.row
+					.d-none.d-lg-block.col-lg-6
+						.slider-wrappper
+							.success-works-pic
+								a(href="#!" data-img="1").success-work__img.active
+									img(src="img/success-works/docs.png", alt="documents")
+								a(href="#!" data-img="2").success-work__img
+									img(src="img/success-works/docs2.png", alt="documents")
+
+					.col-lg-6
+						.slider-wrapper
+							h2.title-30.title-decore Примеры выигранных дел:
+							.success-works.owl-carousel
+								.success-work-slider(data-index="1" )
+									.success-work__text
+										h4 Оспаривание отцовства
+										p По общему правилу сведения о матери ребенка вносятся в актовую запись о его рождении на основании справки из роддома. При этом, если на момент рождения ребенка мужчина и женщина состоят в зарегистрированном браке, сведения об отце ребенка вносятся в актовую запись о рождении автоматически на основании свидетельства о браке (такое правило действует также при рождении ребенка в течение трехсот дней со дня расторжения между ними брака). 
+										p Оспаривание отцовства возможно лишь в судебном порядке. В целях установления биологического отцовства по подобным спорам проводится судебная молекулярно-генетическая экспертиза, результаты которой учитываются судом при вынесении решения.
+										.work-document
+											a(href="#!").text-14
+												+linkIcon
+												span Смотреть документ
+
+								.success-work-slider(data-index="2" )
+									.success-work__text
+										h4 Опекунство
+										p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores perferendis iure iste suscipit natus doloremque rem, minima voluptas! Fugit accusamus asperiores aliquam alias quos, sint eos tempora sunt numquam iusto?
+										p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia iusto maiores possimus nisi rem suscipit accusamus. Autem repellendus deleniti, minus iusto minima alias? Consectetur a reiciendis ipsam molestias commodi.
+										.work-document
+											a(href="#!").text-14
+												+linkIcon
+												span Смотреть документ
+							.slider-arrow-block
+								.slider-arrow.success-arrow
+									.success-prev.arrow-icon
+										+arrLeft
+									.success-next.arrow-icon
+										+arrRight
 
 //- SVG ICONS
 mixin arrow

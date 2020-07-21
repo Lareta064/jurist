@@ -2,10 +2,11 @@ extends ../layouts/layout.pug
 
 block content
 	#overlay
-	+fixHeader([{link:'services.html', title: 'Услуги'},{link:'index.html#work-scheme', title: 'Схема работы'},{link:'index.html#success-works', title: 'Результаты дел'},{link:'our-team.html', title: 'Наша команда'},{link:'blog.html', title: 'Статьи'},{link:'contacts', title: 'Контакты'}])
+	+fixHeader([{link:'services.html', title: 'Услуги'},{link:'index.html#work-scheme', title: 'Схема работы'},{link:'index.html#success-works', title: 'Результаты дел'},{link:'our-team.html', title: 'Наша команда'},{link:'blog.html', title: 'Статьи'},{link:'contacts.html', title: 'Контакты'}])
 	include ../sections/_header.pug
 	include ../sections/_direction.pug
-	include ../sections/_success.pug
+	+success(id="success-works")
+	//- include ../sect#success-worksions/_success.pug
 	include ../sections/_team.pug
 	include ../sections/_scheme.pug
 	include ../sections/_service-cost.pug

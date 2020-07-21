@@ -1,6 +1,6 @@
 .success {
 	padding-top: 100px;
-	padding-bottom: 180px;
+	padding-bottom: 160px;
 	background-color: @sec1;
 
 	@media(max-width:1199px) {
@@ -40,6 +40,47 @@
 		}
 	}
 }
+
+#success-works.success {
+
+	padding-top: 240px;
+	margin-top: -140px;
+
+	position: relative;
+
+	@media(max-width:1199px) {
+		padding-top: 180px;
+		margin-top: -100px;
+
+	}
+
+	@media(max-width:767px) {
+		padding-top: 125px;
+		margin-top: -65px;
+
+	}
+
+	&:after {
+		content: '';
+		height: 140px;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+
+		@media(max-width:1199px) {
+			height: 100px;
+		}
+
+		@media(max-width:767px) {
+			height: 70px;
+		}
+	}
+}
+
+
 
 .success-content {
 	position: relative;
@@ -220,7 +261,7 @@
 	animation-name: fadeIn;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	animation-timing-function: linear;
+	animation-timing-function: ease-in-out;
 
 
 }

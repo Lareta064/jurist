@@ -1,6 +1,6 @@
 .team {
 	padding-top: 150px;
-	padding-bottom: 190px;
+	padding-bottom: 340px;
 
 	h2 {
 		position: absolute;
@@ -9,13 +9,13 @@
 
 	@media(max-width:1439px) {
 		padding-top: 120px;
-		padding-bottom: 120px;
+		padding-bottom: 300px;
 	}
 
 	@media(max-width:1199px) {
 		position: relative;
 		padding-top: 100px;
-		padding-bottom: 100px;
+		padding-bottom: 240px;
 
 		h2 {
 			position: relative;
@@ -27,13 +27,13 @@
 
 	@media(max-width:991px) {
 		padding-top: 80px;
-		padding-bottom: 80px;
+
 
 	}
 
 	@media(max-width:767px) {
 		padding-top: 60px;
-		padding-bottom: 150px;
+
 
 	}
 }
@@ -162,11 +162,11 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	opacity: 0;
-	animation-name: fadeIn;
-	animation-duration: 1.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
+	// opacity: 0;
+	// animation-name: fadeIn;
+	// animation-duration: 1.5s;
+	// animation-fill-mode: forwards;
+	// animation-timing-function: ease-in-out;
 
 
 	@media(max-width:1199px) {
@@ -203,9 +203,9 @@
 
 	&.active {
 		animation-name: fadeIn;
-		animation-duration: 1s;
+		animation-duration: 1.5s;
 		animation-fill-mode: forwards;
-		animation-timing-function: linear;
+		animation-timing-function: cubic-bezier(.81, .37, .6, .74);
 		opacity: 1;
 
 	}

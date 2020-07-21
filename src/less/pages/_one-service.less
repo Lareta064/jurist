@@ -14,13 +14,17 @@
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	display: block;
-	// @media(max-width:991px) {
-	// 	margin-bottom: 30px;
-	// }
+
+	@media(max-width:767px) {
+		max-width: 380px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	.teammate-photo {
 		margin-bottom: 20px;
 		transition: .7s;
+		filter: grayscale(3);
 	}
 
 	.photo-title {
@@ -43,7 +47,9 @@
 
 	&:hover .teammate-photo {
 		transform: scale(1.03);
+		filter: grayscale(0);
 		transition: .7s;
+
 	}
 
 	&:hover h4 {
@@ -51,9 +57,14 @@
 	}
 }
 
+.one-service-team {
+	.teammate-card {
+		margin-bottom: 40px;
+	}
+
+}
+
 .one-service-cost {
-	// padding-top: 150px;
-	// padding-bottom: 150px;
 
 	.title-30 {
 		margin-bottom: 90px;

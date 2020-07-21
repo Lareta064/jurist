@@ -62,7 +62,7 @@ $(document).ready(function () {
 		})
 	}
 
-	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
+	// ПОКАЗАТЬ ФИКС МЕНЮ 
 	window.addEventListener('scroll', function () {
 		const fixHeaderTop = document.querySelector('.header-fix');
 		if (this.pageYOffset > 50) {
@@ -172,7 +172,9 @@ $(document).ready(function () {
 		navSpeed: 1000,
 		smartSpeed: 1000,
 		mouseDrag: false,
-		dots: false
+		dots: false,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
 		// responsive: {
 		// 	767: {
 		// 		dots: false
@@ -246,15 +248,11 @@ $(document).ready(function () {
 		margin: 30,
 		navSpeed: 1000,
 		smartSpeed: 1000,
-		mouseDrag: false,
 		dots: false,
-		// animateIn: 'fadeIn',
-		// animateIn: 'fadeOut',
-		// responsive: {
-		// 	767: {
-		// 		dots: false
-		// 	}
-		// }
+		animateOut: 'fadeOut',
+		mouseDrag: false,
+		animateIn: 'fadeIn',
+
 	})
 
 	let slidePicTeam = $('.team-slide__img');
@@ -352,7 +350,5 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
-
-
 
 })
