@@ -97,6 +97,125 @@
 	}
 }
 
+#politicText .modal-content {
+	padding: 30px;
+	padding-right: 10px;
+	padding-top: 50px;
+
+	@media(max-width:767px) {
+		padding-left: 6px;
+	}
+
+	.modal-body {
+		max-height: 500px;
+		overflow: auto;
+
+		@media(max-width: 575px) {
+			max-height: 350px;
+		}
+
+		@media(max-width: 359px) {
+			max-height: 270px;
+		}
+
+		&::-webkit-scrollbar {
+			/* 1 - скроллбар */
+			width: 6px;
+			height: 6px;
+			background-color: #cecece;
+		}
+
+		&::-webkit-scrollbar-button {
+			/* 2 - кнопка */
+		}
+
+		&::-webkit-scrollbar-track {
+			/* 3 - трек */
+			background-color: #777;
+		}
+
+		&::-webkit-scrollbar-track-piece {
+			/* 4 - видимая часть трека */
+		}
+
+		&::-webkit-scrollbar-thumb {
+			/* 5 - ползунок */
+			border-radius: 2px;
+			background-color: @ac;
+		}
+	}
+
+	.modal-form-title h3 {
+		color: #fff;
+		font-size: 17px;
+		text-align: center;
+		padding-bottom: 25px;
+
+		@media(max-width:767px) {
+			font-size: 15px;
+		}
+	}
+
+	button.close {
+		position: absolute;
+		top: 0px;
+		right: 10px;
+		box-shadow: none;
+		border: 0px;
+
+		@media(max-width:767px) {
+			top: -10px;
+			right: 0px;
+		}
+	}
+}
+
+.politicText-title {
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+
+#politicText ol {
+	padding-top: 20px;
+	padding-left: 10px;
+
+}
+
+#politicText ol li {
+	line-height: 18px;
+	margin-bottom: 10px;
+	font-size: 14px;
+
+	@media(max-width:767px) {
+		font-size: 13px;
+	}
+}
+
+#politicText ul li {
+	line-height: 27px;
+	margin-bottom: 10px;
+	font-size: 14px;
+
+	@media(max-width:767px) {
+		font-size: 13px;
+	}
+}
+
+#politicText ul.rules-list {
+	padding-bottom: 20px;
+}
+
+#politicText ul.rules-list li {
+	line-height: 22px;
+
+}
+
+#politicText .text-part {
+	padding-bottom: 10px;
+	font-size: 14px;
+}
+
 #consultantModal .modal-content {
 	background-image: url(../img/sections-img/modalBg1.jpg);
 	background-size: cover;
